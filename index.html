@@ -72,7 +72,7 @@
     #mobile-menu.open { max-height: 360px; }
 
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-answer.open { max-height: 280px; }
+    .faq-answer.open { max-height: 480px; }
     .faq-icon { transition: transform 0.3s ease; }
     .faq-open .faq-icon { transform: rotate(45deg); }
 
@@ -90,7 +90,7 @@
 
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown/70">
         <a href="#features" class="hover:text-orange transition-colors">Функции</a>
-        <a href="#about"    class="hover:text-orange transition-colors">За нас</a>
+        <a href="#about"    class="hover:text-orange transition-colors">За мен</a>
         <a href="#pricing"  class="hover:text-orange transition-colors">Цени</a>
         <a href="#faq"      class="hover:text-orange transition-colors">Въпроси</a>
       </div>
@@ -107,7 +107,7 @@
     <div id="mobile-menu" class="md:hidden bg-cream border-t border-brown/10">
       <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col gap-4 text-sm font-medium">
         <a href="#features" class="hover:text-orange transition-colors py-1">Функции</a>
-        <a href="#about"    class="hover:text-orange transition-colors py-1">За нас</a>
+        <a href="#about"    class="hover:text-orange transition-colors py-1">За мен</a>
         <a href="#pricing"  class="hover:text-orange transition-colors py-1">Цени</a>
         <a href="#faq"      class="hover:text-orange transition-colors py-1">Въпроси</a>
         <a href="#pricing" class="btn-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1">Започни безплатно</a>
@@ -125,32 +125,29 @@
           Ново поколение колористика
         </div>
 
-        <h1 class="text-4xl sm:text-5xl xl:text-[3.6rem] font-bold text-brown leading-[1.1] mb-6">
-          Край на<br>гадаенето<br>
-          <em class="grad-text not-italic">в колористиката.</em>
+        <h1 class="text-3xl sm:text-4xl xl:text-[3.2rem] font-bold text-brown mb-6">
+          Край на гадаенето в колористиката.<br>
         </h1>
+        <h2 class="grad-text not-italic text-xl mb-10 font-bold">Всичко за твоите клиенти. Всичко за твоята колористика. На едно място.</h2>
 
-        <p class="text-brown/65 text-lg leading-relaxed mb-9 max-w-md">
-          ColoristIQ изчислява точните формули, пази историята на клиентите ти и ти спестява часове работа — всичко на едно място.
+        <p class="text-brown/65 text-lg leading-relaxed mb-9 max-w-lg">
+          ColoristIQ ти помага да управляваш клиентите си, да пазиш историята им и да създаваш точни цветови формули, без тефтери, бележки и сметки на ръка.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-4 rounded-full text-base text-center">
-            Опитай безплатно →
-          </a>
-          <a href="#features" class="border-2 border-brown/20 text-brown font-semibold px-8 py-4 rounded-full text-base text-center hover:border-orange hover:text-orange transition-all duration-300">
+          <a href="#features" class="btn-primary text-white font-semibold px-8 py-4 rounded-full text-base text-center">
             Разгледай функциите
           </a>
         </div>
 
-        <div class="mt-10 flex items-center gap-4">
+        <!-- <div class="mt-10 flex items-center gap-4">
           <div class="flex -space-x-2.5">
             <img src="assets/3-models/IMG_1236.JPG" class="w-9 h-9 rounded-full object-cover object-top border-2 border-white" alt="">
             <img src="assets/3-models/IMG_1238.JPG" class="w-9 h-9 rounded-full object-cover object-top border-2 border-white" alt="">
             <img src="assets/3-models/IMG_1244.JPG" class="w-9 h-9 rounded-full object-cover object-top border-2 border-white" alt="">
           </div>
           <p class="text-sm text-brown/55"><span class="font-semibold text-brown">500+</span> колористи вече използват ColoristIQ</p>
-        </div>
+        </div> -->
       </div>
 
       <div class="fade-up d2 relative">
@@ -163,8 +160,8 @@
             <svg class="w-5 h-5 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
-            <p class="text-[11px] text-brown/45 leading-none mb-0.5">Точност на формулите</p>
-            <p class="text-sm font-bold text-brown">99.8%</p>
+            <p class="text-[11px] text-brown/45 leading-none mb-0.5">При тест със 100 формули</p>
+            <p class="text-sm font-bold text-brown">99.8% точност</p>
           </div>
         </div>
       </div>
@@ -176,10 +173,11 @@
     <div class="max-w-6xl mx-auto px-5">
       <div class="text-center mb-16 fade-up">
         <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Защо ColoristIQ?</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-brown">
+        <h2 class="text-3xl sm:text-4xl font-bold text-brown mb-4">
           6 причини защо<br>
-          <span class="grad-text">професионалистите го избират</span>
+          <span class="grad-text">професионалистите избират ColoristIQ</span>
         </h2>
+        <h3 class="text-xl">По-малко бележки. По-малко грешки.</h3>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,50 +186,56 @@
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">Интелигентни формули</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Автоматично изчислява необходимите количества и пропорции за всяко боядисване с точност до грам.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Работи умно. Не трудно.</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">ColoristIQ изчислява с точност до грам необходимите количества и пропорции за всяко боядисване вместо теб.</p>
         </div>
 
         <div class="card-hover bg-cream rounded-2xl p-8 fade-up d1">
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">Профили на клиентите</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Пълна история на всеки клиент — формули, дати, резултати — достъпна с едно докосване.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Запази клиента, не само формулата.</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">Виж историята на клиента, формулите и резултатите му на едно място.</p>
         </div>
 
         <div class="card-hover bg-cream rounded-2xl p-8 fade-up d2">
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">Работа с много марки</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Wella, Schwarzkopf, L'Oréal и много други — всички в единна платформа без превключване.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Работи с марките, с които работиш и ти.</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">Wella, Schwarzkopf, L'Oréal и много други — всички в единна платформа без превключване. Можеш да създадеш формула и без да въвеждаш конкретна марка.</p>
         </div>
 
         <div class="card-hover bg-cream rounded-2xl p-8 fade-up d1">
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">Създадено за лесна работа</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Интуитивен интерфейс, работи перфектно на телефон, таблет и компютър — когато имаш нужда.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Работи там, където работиш ти.</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">Телефон. Таблет. Компютър.</p>
         </div>
 
         <div class="card-hover bg-cream rounded-2xl p-8 fade-up d2">
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">Честна цена</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Започни безплатно без карта. Плати само ако харесаш — без скрити такси и обвързващи договори.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Без риск - тестваш преди да плащаш</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">6 клиента. 4 формули. Календар. Клиентска история. Когато клиентите и формулите ти станат повече, премини към платената версия.</p>
         </div>
 
         <div class="card-hover bg-cream rounded-2xl p-8 fade-up d3">
           <div class="w-12 h-12 bg-orange/10 rounded-2xl flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-brown mb-3">На български език</h3>
-          <p class="text-brown/60 leading-relaxed text-sm">Разработено от български колорист за български колористи — на твой език с локална поддръжка.</p>
+          <h3 class="text-xl font-bold text-brown mb-3">Направено от колорист за колористи.</h3>
+          <p class="text-brown/60 leading-relaxed text-sm">ColoristIQ е създаден от практикуващ колорист, с опит над 35 години - на твой език с локална поддръжка.</p>
         </div>
 
+      </div>
+
+      <div class="text-center mt-12 fade-up">
+        <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-4 rounded-full text-base inline-flex">
+          Виж как работи
+        </a>
       </div>
     </div>
   </section>
@@ -244,42 +248,48 @@
         <h2 class="text-3xl sm:text-4xl font-bold text-brown">Създадено от колорист<br><span class="grad-text">за колористи</span></h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+      <div class="grid lg:grid-cols-2 gap-16 items-start mb-20">
         <div class="fade-up relative">
           <div class="img-zoom rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
             <img src="assets/2.JPG" alt="Основателят на ColoristIQ" class="w-full h-full object-cover object-top">
           </div>
           <div class="absolute -bottom-6 -right-4 bg-white rounded-2xl shadow-xl p-5">
             <p class="text-[11px] text-brown/45 mb-1">Опит в бранша</p>
-            <p class="text-2xl font-bold grad-text leading-none">15+ години</p>
+            <p class="text-2xl font-bold grad-text leading-none">35+ години</p>
             <p class="text-[11px] text-brown/45 mt-1">активна колористика</p>
           </div>
         </div>
 
         <div class="fade-up d2">
           <blockquote class="font-display text-2xl sm:text-3xl italic text-brown leading-snug mb-8 pl-6 border-l-4 border-orange">
-            "Фрустрацията ми е проста — защо всеки колорист трябва да преизчислява едно и също нещо отново и отново?"
+            "Фризьорството не е просто професия. То е моят код за общуване със света."
           </blockquote>
           <p class="text-brown/65 text-base leading-relaxed mb-5">
-            Аз съм Любомира Калчева-Батемпова. Преди да разработя тази програма, прекарвах по 30 минути на ден в ръчни изчисления в салона. Исках инструмент, кoйто да ми спести това време.
+            Аз съм Любомира Кирилова Баталска. Пътят ми в света на косите започна преди повече от две десетилетия, когато прекрачих прага на първия си салон. Оттогава преминах през безброй обучения, стотици часове зад стола и хиляди усмивки на доволни клиенти.
           </p>
-          <p class="text-brown/65 text-base leading-relaxed mb-8">
-            ColoristIQ е резултат от над 2 години разработка, тестване и обратна връзка от стотици колористи. Всяка функция е обмислена от практикуващ специалист — не от програмист.
+          <p class="text-brown/65 text-base leading-relaxed mb-5">
+            Моята страст винаги е била колористиката – тази фина граница между науката за химичните процеси и изкуството да виждаш цветовете. Обучавала съм се при едни от най-големите световни имена и марки. Когато работиш с обсесия към съвършенството, светът те забелязва:
           </p>
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 mb-5">
             <div class="flex items-center gap-2.5 text-sm text-brown/70">
               <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Финалист на Color Zoom
+              Златен финалист на Color Zoom България (2017 и 2019 г.)
             </div>
             <div class="flex items-center gap-2.5 text-sm text-brown/70">
               <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Финалист на Eaasi Color Live
+              Финалист на Estel Color Live (2020 и 2021 г.)
             </div>
             <div class="flex items-center gap-2.5 text-sm text-brown/70">
               <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Сребърен медал на CIFa, Франция 2023
+              Сребърен медал от Световното първенство на CMC в Италия (2023 г.)
             </div>
           </div>
+          <p class="text-brown/65 text-base leading-relaxed mb-5">
+            През всички тези години се сблъсквах с един и същ проблем: липсата на надежден, съвременен инструмент, който да ми помага да организирам своите формули и да следя историята на клиентите си. Тефтерите се губеха, листовете се късаха, а паметта... паметта понякога изневерява.
+          </p>
+          <p class="text-brown/65 text-base leading-relaxed">
+            Така се роди идеята за Colorist IQ. Събрах своя 35-годишен опит, знанията си за нуждите на работещия колорист и най-добрите технологични практики, за да създам приложението, което винаги съм искала да имам. Colorist IQ е моят начин да споделя този опит с вас и да ви дам свободата да творите без ограничения и без страх от грешки.
+          </p>
         </div>
       </div>
 
@@ -306,12 +316,15 @@
       </div>
       <div class="fade-up d2 order-1 lg:order-2">
         <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-4">Тайната на успешните колористи</p>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 leading-snug">Работи по-умно,<br>не по-усилено.</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6 leading-snug">Работи по-умно,<br>не по-трудно</h2>
         <p class="text-white/60 text-base leading-relaxed mb-5">
-          В света на бързо развиващата се козметична индустрия успешните колористи не само следят трендовете — те работят с инструменти, кoито ги правят по-ефективни.
+          В света на бързо развиващата се козметична индустрия успешните колористи не само следят трендовете — те работят с инструменти, кoито ги правят по-ефективни. Според Professional Beauty Association, салоните, които въвеждат дигитални инструменти за управление на формули и клиенти, увеличават задържането на клиенти с над 30%?
+        </p>
+        <p class="text-white/60 text-base leading-relaxed mb-5">
+          ColoristIQ замества тефтерите, WhatsApp бележките и ръчните изчисления с една интелигентна платформа, проектирана специално за колористи.
         </p>
         <p class="text-white/60 text-base leading-relaxed mb-10">
-          ColoristIQ замества тефтерите, WhatsApp бележките и ръчните изчисления с единна интелигентна платформа, проектирана специално за колористи.
+          Когато спрете да губите време в чудене "Какво точно сложих миналия път?", вие освобождавате пространство за истинско творчество и безупречно обслужване. Избягването на метода "проба-грешка" не само спасява косите на клиентите ви, но и гради доверие, което ги кара да се връщат отново и отново.
         </p>
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-white/8 rounded-2xl p-5 border border-white/10">
@@ -319,17 +332,17 @@
             <p class="text-white/50 text-sm">спестени на ден</p>
           </div>
           <div class="bg-white/8 rounded-2xl p-5 border border-white/10">
-            <p class="text-3xl font-bold text-orange mb-1">0</p>
-            <p class="text-white/50 text-sm">грешки в рецептурата</p>
+            <p class="text-3xl font-bold text-orange mb-1">99.8%</p>
+            <p class="text-white/50 text-sm">точност при тест със 100 формули</p>
           </div>
-          <div class="bg-white/8 rounded-2xl p-5 border border-white/10">
+          <!-- <div class="bg-white/8 rounded-2xl p-5 border border-white/10">
             <p class="text-3xl font-bold text-orange mb-1">500+</p>
             <p class="text-white/50 text-sm">активни колористи</p>
           </div>
           <div class="bg-white/8 rounded-2xl p-5 border border-white/10">
             <p class="text-3xl font-bold text-orange mb-1">4.9 ★</p>
             <p class="text-white/50 text-sm">средна оценка</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -341,100 +354,106 @@
       <div class="text-center mb-16 fade-up">
         <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Прости и прозрачни</p>
         <h2 class="text-3xl sm:text-4xl font-bold text-brown mb-4">Ценови планове</h2>
-        <p class="text-brown/55 text-base max-w-sm mx-auto">Започни безплатно. Надгради само когато си готов. Без скрити такси.</p>
+        <p class="text-brown/55 text-base max-w-md mx-auto">Започни с това, което ти е нужно. Надгради, когато пораснеш.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
 
-        <!-- Free -->
+        <!-- СТАРТ -->
         <div class="card-hover bg-cream rounded-3xl p-8 border border-brown/10 fade-up flex flex-col">
-          <p class="text-brown/45 text-xs font-bold uppercase tracking-widest mb-5">Free</p>
-          <div class="flex items-baseline gap-1 mb-2">
-            <span class="text-5xl font-bold text-brown">0€</span>
+          <p class="text-brown/45 text-xs font-bold uppercase tracking-widest mb-5">Старт</p>
+          <div class="flex items-baseline gap-2 mb-3">
+            <span class="text-5xl font-bold text-brown">0&nbsp;€</span>
+            <span class="text-brown/35 text-sm font-medium">/ завинаги</span>
           </div>
-          <p class="text-brown/50 text-sm mb-8">7 дни пълен достъп — без карта.</p>
-          <ul class="space-y-3 mb-10 flex-1">
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              7 дни пълен достъп
+          <p class="text-brown/50 text-sm leading-relaxed mb-8">Всичко необходимо, за да започнеш с ColoristIQ.</p>
+          <ul role="list" class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Интуитивно клиентско табло
             </li>
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Формули за цветове
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Календар
             </li>
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              3 клиентски профила
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              До 6 клиентски профила
+            </li>
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              До 4 генерирани формули на месец
+            </li>
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              История на клиентите
+            </li>
+            <li class="flex items-start gap-3 text-sm text-brown/65">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Достъп от телефон, таблет и компютър
             </li>
           </ul>
-          <a href="#" class="block text-center border-2 border-brown/20 text-brown font-semibold py-3 px-6 rounded-full hover:border-orange hover:text-orange transition-all duration-300 text-sm mt-auto">
-            Започни безплатно
+          <a href="#" class="block text-center border-2 border-brown/20 text-brown font-semibold py-3 px-6 rounded-full hover:border-orange hover:text-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-cream transition-all duration-300 text-sm mt-auto">
+            Започни със СТАРТ →
           </a>
+          <div class="mt-5 bg-brown/5 border border-brown/10 rounded-2xl p-4">
+            <p class="text-brown/65 text-sm font-semibold">Без карта. Без договор. Без риск.</p>
+            <p class="text-brown/45 text-xs leading-relaxed mt-1.5">Надгради до ПРО, когато клиентите и формулите ти станат повече.</p>
+          </div>
         </div>
 
-        <!-- Pro -->
+        <!-- ПРО -->
         <div class="card-hover bg-brown rounded-3xl p-8 fade-up d1 relative flex flex-col">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange text-white text-[11px] font-bold px-5 py-1.5 rounded-full uppercase tracking-wide whitespace-nowrap">
             Най-популярен
           </div>
-          <p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-5">Pro</p>
-          <div class="flex items-baseline gap-1 mb-1">
-            <span class="text-5xl font-bold text-white">10€</span>
-            <span class="text-white/40 text-sm">/месец</span>
+          <p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-5">Про</p>
+          <div class="flex items-baseline flex-wrap gap-x-2 gap-y-1 mb-1">
+            <span class="text-5xl font-bold text-white">10&nbsp;€</span>
+            <span class="text-white/40 text-sm font-medium">/ месец</span>
+            <span class="sr-only">вместо 15 € на месец,</span>
+            <span aria-hidden="true" class="text-white/35 text-sm line-through">15&nbsp;€</span>
+            <span class="bg-orange/20 text-orange text-[11px] font-bold px-2 py-0.5 rounded-full">−33%</span>
           </div>
-          <p class="text-orange text-xs font-semibold mb-8">или 96€/година — спести 20%</p>
-          <ul class="space-y-3 mb-10 flex-1">
-            <li class="flex items-center gap-3 text-sm text-white/75">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Пълен годишен достъп
+          <p class="text-orange text-xs font-semibold mb-4">при годишно плащане</p>
+          <p class="text-white/55 text-sm leading-relaxed mb-8">За колористи, които искат ColoristIQ да стане част от ежедневната им работа.</p>
+          <ul role="list" class="space-y-3 mb-8 flex-1">
+            <li class="flex items-start gap-3 text-sm text-white/75">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Неограничени клиентски профили
             </li>
-            <li class="flex items-center gap-3 text-sm text-white/75">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <li class="flex items-start gap-3 text-sm text-white/75">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
               Неограничени формули
             </li>
-            <li class="flex items-center gap-3 text-sm text-white/75">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Неограничени клиенти
+            <li class="flex items-start gap-3 text-sm text-white/75">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Пълна история на клиентите
             </li>
-            <li class="flex items-center gap-3 text-sm text-white/75">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              12 месеца инспирация
+            <li class="flex items-start gap-3 text-sm text-white/75">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Календар
+            </li>
+            <li class="flex items-start gap-3 text-sm text-white/75">
+              <svg aria-hidden="true" class="w-4 h-4 text-orange shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Достъп от телефон, таблет и компютър
             </li>
           </ul>
-          <a href="#" class="block text-center btn-primary text-white font-semibold py-3 px-6 rounded-full text-sm mt-auto">
-            Вземи Pro
+          <a href="#" class="block text-center btn-primary text-white font-semibold py-3 px-6 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brown text-sm mt-auto">
+            Премини към ПРО →
           </a>
-        </div>
-
-        <!-- Monthly -->
-        <div class="card-hover bg-cream rounded-3xl p-8 border border-brown/10 fade-up d2 flex flex-col">
-          <p class="text-brown/45 text-xs font-bold uppercase tracking-widest mb-5">Monthly</p>
-          <div class="flex items-baseline gap-1 mb-2">
-            <span class="text-5xl font-bold text-brown">15€</span>
-            <span class="text-brown/35 text-sm">/месец</span>
+          <div class="mt-5 bg-white/5 border border-white/10 rounded-2xl p-4">
+            <div class="flex items-baseline justify-between gap-3 text-sm">
+              <span class="text-white/45">Месечен план</span>
+              <span class="text-white/80 font-semibold whitespace-nowrap">15 € / мес</span>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 text-sm mt-2 pt-2 border-t border-white/10">
+              <span class="text-white/45">Годишен план</span>
+              <span class="text-white/80 font-semibold whitespace-nowrap">10 € / мес</span>
+            </div>
+            <p class="text-white/35 text-xs text-right mt-1">120 € еднократно за 12 месеца</p>
+            <p class="text-orange text-xs font-semibold mt-3">Спестяваш загуба от 60 € на година.</p>
           </div>
-          <p class="text-brown/50 text-sm mb-8">Максимална гъвкавост — спри по всяко време.</p>
-          <ul class="space-y-3 mb-10 flex-1">
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Пълен месечен достъп
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Неограничени формули
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              Неограничени клиенти
-            </li>
-            <li class="flex items-center gap-3 text-sm text-brown/65">
-              <svg class="w-4 h-4 text-orange shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              1 месец инспирация
-            </li>
-          </ul>
-          <a href="#" class="block text-center border-2 border-brown/20 text-brown font-semibold py-3 px-6 rounded-full hover:border-orange hover:text-orange transition-all duration-300 text-sm mt-auto">
-            Вземи Monthly
-          </a>
         </div>
 
       </div>
@@ -445,7 +464,7 @@
   <section id="faq" class="py-24 bg-cream">
     <div class="max-w-3xl mx-auto px-5">
       <div class="text-center mb-14 fade-up">
-        <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Имаш въпроси?</p>
+        <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Имате въпроси?</p>
         <h2 class="text-3xl sm:text-4xl font-bold text-brown">Често задавани въпроси</h2>
       </div>
 
@@ -453,17 +472,58 @@
 
         <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
           <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
-            <span class="text-brown font-semibold text-sm leading-snug">Наистина ли ми трябва приложение, не мога ли просто да си пиша формулите?</span>
+            <span class="text-brown font-semibold text-sm leading-snug">Какво се случва, когато достигна 6 клиента с плана Lite?</span>
             <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Можеш, но ColoristIQ прави значително повече — изчислява точните количества автоматично, следи историята на всеки клиент и дава напомняния. Икономията на времето и намаляването на грешките се отплаща много бързо.</p>
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Можеш да продължиш да използваш съществуващите профили, а за добавяне на нови клиенти е необходимо да преминеш към Pro.</p>
           </div>
         </div>
 
         <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
           <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
-            <span class="text-brown font-semibold text-sm leading-snug">Трябва ли да съм технически грамотна, за да използвам приложението?</span>
+            <span class="text-brown font-semibold text-sm leading-snug">Какво се случва, когато достигна 4 формули?</span>
+            <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Можеш да използваш и запазваш съществуващите формули, а за генериране на нови е необходимо да преминеш към Pro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
+            <span class="text-brown font-semibold text-sm leading-snug">Мога ли да премина от Lite към Pro по всяко време?</span>
+            <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Да. Можеш да надградиш към Pro по всяко време, без да прекъсваш работата си (без да губиш вече създадените профили на клиенти и формули).</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
+            <span class="text-brown font-semibold text-sm leading-snug">Ще загубя ли данните си, ако премина към Pro?</span>
+            <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Не. Всички твои клиенти, история и формули се запазват.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
+            <span class="text-brown font-semibold text-sm leading-snug">Трябва ли да въвеждам всички клиенти наведнъж?</span>
+            <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Не. Добавяш клиентите постепенно, когато имаш нужда от тях.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
+          <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
+            <span class="text-brown font-semibold text-sm leading-snug">Трябва ли да съм технически грамотен, за да използвам ColoristIQ?</span>
             <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
           </button>
           <div class="faq-answer">
@@ -473,7 +533,7 @@
 
         <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
           <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
-            <span class="text-brown font-semibold text-sm leading-snug">Какво се случва с данните ми, ако сменя телефона или таблета си?</span>
+            <span class="text-brown font-semibold text-sm leading-snug">Какво става с данните ми, ако сменя телефона или таблета си?</span>
             <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
           </button>
           <div class="faq-answer">
@@ -481,23 +541,14 @@
           </div>
         </div>
 
+        
         <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
           <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
-            <span class="text-brown font-semibold text-sm leading-snug">Може ли ColoristIQ да замени техническите ни познания като колористи?</span>
+            <span class="text-brown font-semibold text-sm leading-snug">Приложението ColoristIQ може ли да замени моите технически познания като фризьор?</span>
             <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">ColoristIQ е инструмент за подпомагане, не за заместване. Твоята експертиза е незаменима — приложението само прави работата ти по-бърза и по-точна. Ти вземаш крайните творчески решения.</p>
-          </div>
-        </div>
-
-        <div class="faq-item bg-white rounded-2xl border border-brown/5 overflow-hidden">
-          <button class="faq-btn w-full flex items-center justify-between p-6 text-left gap-4" onclick="toggleFaq(this)">
-            <span class="text-brown font-semibold text-sm leading-snug">Работи ли приложението офлайн?</span>
-            <svg class="faq-icon w-5 h-5 text-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">Да, основните функции работят офлайн. Синхронизацията с облака става автоматично при следващо свързване с интернет.</p>
+            <p class="px-6 pb-6 text-brown/60 text-sm leading-relaxed">ColoristIQ е инструмент за подпомагане, не за заместване. Твоята експертиза е незаменима — приложението само прави работата <strong>ти по-лесна, по-бърза и по-точна.</strong> Ти вземаш крайните творчески решения.</p>
           </div>
         </div>
 
@@ -508,10 +559,39 @@
   <!-- CTA BANNER -->
   <section class="py-20 bg-gradient-to-br from-orange to-orange-light">
     <div class="max-w-3xl mx-auto px-5 text-center fade-up">
-      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">Готова ли си да работиш<br>по-умно?</h2>
-      <p class="text-white/75 text-lg mb-10 max-w-lg mx-auto">Присъедини се към стотиците колористи, кoито вече спестяват часове всяка седмица с ColoristIQ.</p>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mb-8 leading-tight">ColoristIQ е за теб, ако…</h2>
+
+      <ul class="text-left max-w-xl mx-auto mb-10 space-y-3">
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>работиш всеки ден с бои</span>
+        </li>
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>имаш постоянни клиенти</span>
+        </li>
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>водиш бележки в тефтер или телефон</span>
+        </li>
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>често пресмяташ количествата и съставките за формулата наум</span>
+        </li>
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>искаш да виждаш историята на клиента</span>
+        </li>
+        <li class="flex items-start gap-3 text-white text-base sm:text-lg">
+          <svg class="w-6 h-6 flex-shrink-0 mt-0.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          <span>искаш да работиш по-бързо без да губиш контрола върху резултатите</span>
+        </li>
+      </ul>
+
+      <p class="text-white text-lg sm:text-xl font-semibold mb-10 max-w-lg mx-auto">Започни с това, което ти е нужно.<br>Надгради, когато пораснеш.</p>
+
       <a href="#pricing" class="inline-flex bg-white text-orange font-bold px-10 py-4 rounded-full text-base hover:bg-cream transition-all duration-300 shadow-xl hover:-translate-y-1 transform">
-        Опитай безплатно — 7 дни
+        Започни безплатно със СТАРТ
       </a>
     </div>
   </section>
@@ -521,11 +601,12 @@
     <div class="max-w-6xl mx-auto px-5">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="lg:col-span-2">
-          <img src="assets/logo.png" alt="ColoristIQ" class="h-10 mb-5 brightness-0 invert">
-          <p class="text-white/45 text-sm leading-relaxed max-w-xs">Интелигентен асистент за колористи. Точни формули, клиентски профили и спестено време — на едно място.</p>
+          <!-- <img src="assets/logo.png" alt="ColoristIQ" class="h-10 mb-5 brightness-0 invert"> -->
+           <p class="text-3xl text-white font-bold mb-1">ColoristIQ</p>
+          <p class="text-white/45 text-sm leading-relaxed max-w-xs">Твоето дигитално работно място за колористика. Точни формули. История на клиентите. На едно място.</p>
           <div class="flex gap-3 mt-6">
-            <a href="#" aria-label="Facebook" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <a href="#" aria-label="YouTube" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.1c-.6.1-1.8.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2.1.3 4.2.3 4.2s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.4 12 21.4 12 21.4s4.2 0 7.1-.2c.6-.1 1.8-.1 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.2v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l7.6 3.6-7.6 3.5z"/></svg>
             </a>
             <a href="#" aria-label="Instagram" class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round"/></svg>
@@ -548,7 +629,7 @@
         <div>
           <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Компания</h4>
           <ul class="space-y-3">
-            <li><a href="#about" class="text-white/45 text-sm hover:text-orange transition-colors">За нас</a></li>
+            <li><a href="#about" class="text-white/45 text-sm hover:text-orange transition-colors">За мен</a></li>
             <li><a href="#"      class="text-white/45 text-sm hover:text-orange transition-colors">Поверителност</a></li>
             <li><a href="#"      class="text-white/45 text-sm hover:text-orange transition-colors">Условия</a></li>
             <li><a href="#"      class="text-white/45 text-sm hover:text-orange transition-colors">Контакти</a></li>
@@ -557,8 +638,8 @@
       </div>
 
       <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <p class="text-white/25 text-xs">© 2025 ColoristIQ. Всички права запазени.</p>
-        <p class="text-white/25 text-xs">Направено с любов за колористи в България</p>
+        <p class="text-white/25 text-xs">© 2026 ColoristIQ. Всички права запазени.</p>
+        <p class="text-white/25 text-xs">Направено с любов за колористи в България.</p>
       </div>
     </div>
   </footer>
