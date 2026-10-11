@@ -939,7 +939,10 @@
           <div class="bg-cream rounded-3xl shadow-2xl p-8 sm:p-10">
 
             <!-- Form -->
-            <form id="newsletter-form" novalidate class="space-y-5">
+            <!-- Set data-loops-endpoint to the endpoint from Loops → Forms → Settings. -->
+            <form id="newsletter-form"
+              data-loops-endpoint="https://app.loops.so/api/newsletter-form/cmv104f6601r20j2y7ip2m6jd"
+              data-mailing-list-id="cmv104f6601r20j2y7ip2m6jd" novalidate class="space-y-5">
               <div>
                 <label for="nl-name" class="block text-sm font-semibold text-brown mb-2">Име
                   <span class="text-orange">*</span></label>
@@ -987,10 +990,15 @@
                 </div>
               </div>
 
-              <button type="submit"
+              <button type="submit" id="newsletter-submit"
                 class="btn-primary w-full text-white font-semibold px-6 py-4 rounded-full text-base uppercase tracking-wide mt-2">
-                Запиши се за бюлетина
+                <span data-submit-label>Запиши се за бюлетина</span>
+                <span data-submit-loading class="hidden">Изпращане…</span>
               </button>
+
+              <p id="newsletter-error" role="alert" class="hidden text-orange text-sm text-center leading-relaxed">
+                Възникна проблем при записването. Моля, опитай отново след малко.
+              </p>
 
               <p class="text-brown/40 text-xs text-center leading-relaxed">
                 Записвайки се, се съгласяваш да получаваш имейли от ColoristIQ. Можеш да се отпишеш по всяко време.
@@ -1125,8 +1133,14 @@
       const form = document.getElementById('newsletter-form');
       if (!form) return;
       const success = document.getElementById('newsletter-success');
+      const error = document.getElementById('newsletter-error');
+      const submitButton = document.getElementById('newsletter-submit');
+      const submitLabel = submitButton.querySelector('[data-submit-label]');
+      const submitLoading = submitButton.querySelector('[data-submit-loading]');
       const nameInput = document.getElementById('nl-name');
       const emailInput = document.getElementById('nl-email');
+      const loopsEndpoint = form.dataset.loopsEndpoint.trim();
+      const mailingListId = form.dataset.mailingListId.trim();
       const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       // Toggle the checkmark on the pill cards
@@ -1149,8 +1163,9 @@
         input.addEventListener('input', () => showError(input, false));
       });
 
-      form.addEventListener('submit', e => {
+      form.addEventListener('submit', async e => {
         e.preventDefault();
+        error.classList.add('hidden');
 
         const nameOk = nameInput.value.trim().length > 0;
         const emailOk = emailRe.test(emailInput.value.trim());
@@ -1159,18 +1174,50 @@
         if (!nameOk) { nameInput.focus(); return; }
         if (!emailOk) { emailInput.focus(); return; }
 
-        // Collected data — ready to wire to a backend later.
-        const data = {
-          name: nameInput.value.trim(),
-          email: emailInput.value.trim(),
-          segments: [...form.querySelectorAll('input[name="segment"]:checked')].map(c => c.value),
-        };
-        // TODO: изпрати `data` към имейл услуга / API, когато платформата е готова.
-        console.log('Newsletter signup (UI only):', data);
+        if (!loopsEndpoint) {
+          console.error('Newsletter form is missing its Loops form endpoint.');
+          error.textContent = 'Формулярът все още не е конфигуриран. Моля, опитай отново по-късно.';
+          error.classList.remove('hidden');
+          return;
+        }
 
-        // Show success state
-        form.classList.add('hidden');
-        success.classList.remove('hidden');
+        const selectedSegments = [...form.querySelectorAll('input[name="segment"]:checked')]
+          .map(checkbox => checkbox.value);
+        const body = new URLSearchParams({
+          email: emailInput.value.trim(),
+          firstName: nameInput.value.trim(),
+          source: 'ColoristIQ website',
+          userGroup: selectedSegments.join(', '),
+        });
+
+        if (mailingListId) body.set('mailingLists', mailingListId);
+
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+        submitLabel.classList.add('hidden');
+        submitLoading.classList.remove('hidden');
+
+        try {
+          const response = await fetch(loopsEndpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body,
+          });
+
+          if (!response.ok) throw new Error('Loops form submission failed');
+
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        } catch (submissionError) {
+          console.error('Newsletter submission failed:', submissionError);
+          error.textContent = 'Възникна проблем при записването. Моля, опитай отново след малко.';
+          error.classList.remove('hidden');
+        } finally {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+          submitLabel.classList.remove('hidden');
+          submitLoading.classList.add('hidden');
+        }
       });
     })();
   </script>
