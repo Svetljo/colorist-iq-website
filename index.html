@@ -171,7 +171,21 @@
       border-radius: 3px;
     }
   </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BEMRYF0NV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-8BEMRYF0NV');
+</script>
 
 <body class="overflow-x-hidden">
 
@@ -188,9 +202,9 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="#pricing"
-          class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full">Започни
-          безплатно</a>
+        <a href="#newsletter"
+          class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full">Уведоми ме
+          при старта</a>
         <button id="hamburger" class="md:hidden p-2 text-brown" aria-label="Меню">
           <svg id="ico-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -208,8 +222,9 @@
         <a href="#about" class="hover:text-orange transition-colors py-1">За мен</a>
         <a href="#pricing" class="hover:text-orange transition-colors py-1">Цени</a>
         <a href="#faq" class="hover:text-orange transition-colors py-1">Въпроси</a>
-        <a href="#pricing" class="btn-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1">Започни
-          безплатно</a>
+        <a href="#newsletter"
+          class="btn-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1">Уведоми
+          ме при старта</a>
       </div>
     </div>
   </nav>
@@ -366,8 +381,8 @@
       </div>
 
       <div class="text-center mt-12 fade-up">
-        <a href="#pricing" class="btn-primary text-white font-semibold px-8 py-4 rounded-full text-base inline-flex">
-          Виж как работи
+        <a href="#newsletter" class="btn-primary text-white font-semibold px-8 py-4 rounded-full text-base inline-flex">
+          Полезни съвети за колористи
         </a>
       </div>
     </div>
@@ -590,9 +605,9 @@
               Достъп от телефон, таблет и компютър
             </li>
           </ul>
-          <a href="#"
+          <a href="#newsletter"
             class="block text-center border-2 border-brown/20 text-brown font-semibold py-3 px-6 rounded-full hover:border-orange hover:text-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange focus-visible:ring-offset-2 focus-visible:ring-offset-cream transition-all duration-300 text-sm mt-auto">
-            Започни със СТАРТ →
+            Уведоми ме при старта →
           </a>
           <div class="mt-5 bg-brown/5 border border-brown/10 rounded-2xl p-4">
             <p class="text-brown/65 text-sm font-semibold">Без карта. Без договор. Без риск.</p>
@@ -665,9 +680,9 @@
               Достъп от телефон, таблет и компютър
             </li>
           </ul>
-          <a href="#"
+          <a href="#newsletter"
             class="block text-center btn-primary text-white font-semibold py-3 px-6 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brown text-sm mt-auto">
-            Премини към ПРО →
+            Уведоми ме при старта →
           </a>
           <div class="mt-5 bg-white/5 border border-white/10 rounded-2xl p-4">
             <div class="flex items-baseline justify-between gap-3 text-sm">
@@ -872,15 +887,138 @@
       <p class="text-white text-lg sm:text-xl font-semibold mb-10 max-w-lg mx-auto">Започни с това, което ти е
         нужно.<br>Надгради, когато пораснеш.</p>
 
-      <a href="#pricing"
+      <a href="#newsletter"
         class="inline-flex bg-white text-orange font-bold px-10 py-4 rounded-full text-base hover:bg-cream transition-all duration-300 shadow-xl hover:-translate-y-1 transform">
-        Започни безплатно със СТАРТ
+        Уведоми ме при старта
       </a>
     </div>
   </section>
 
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="py-24 bg-brown">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Left: copy -->
+        <div class="fade-up">
+          <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Очаквай скоро</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-5 leading-snug">
+            Бъди сред първите,<br class="hidden sm:block">
+            които ще научат<br class="hidden sm:block">
+            за старта на <span class="grad-text">ColoristIQ</span>
+          </h2>
+          <p class="text-white/60 text-lg leading-relaxed mb-8 max-w-lg">
+            Абонирай се и ще получиш обучително видео от създателката на Colorist IQ с правилните стъпки за перфектния
+            блонд:
+          </p>
+
+          <ul class="space-y-3 max-w-md">
+            <li class="flex items-start gap-3 text-white/70 text-sm">
+              <svg class="w-5 h-5 text-orange shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7" />
+              </svg>
+              Защо трябва задължително да правим препигментация?
+            </li>
+            <li class="flex items-start gap-3 text-white/70 text-sm">
+              <svg class="w-5 h-5 text-orange shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7" />
+              </svg>
+              Една от най-честите грешки при работата с неутрализацията и как да я коригираме?
+            </li>
+            <li class="flex items-start gap-3 text-white/70 text-sm">
+              <svg class="w-5 h-5 text-orange shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M5 13l4 4L19 7" />
+              </svg>
+              Как се прави гланцирането на коса?
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: form card -->
+        <div class="fade-up d2">
+          <div class="bg-cream rounded-3xl shadow-2xl p-8 sm:p-10">
+
+            <!-- Form -->
+            <form id="newsletter-form" novalidate class="space-y-5">
+              <div>
+                <label for="nl-name" class="block text-sm font-semibold text-brown mb-2">Име
+                  <span class="text-orange">*</span></label>
+                <input type="text" id="nl-name" name="name" required autocomplete="name" placeholder="Твоето име"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-brown/15 text-brown placeholder-brown/35 focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/25 transition-all">
+                <p data-error-for="nl-name" class="hidden text-xs text-orange mt-1.5">Моля, въведи името си.</p>
+              </div>
+
+              <div>
+                <label for="nl-email" class="block text-sm font-semibold text-brown mb-2">Имейл
+                  <span class="text-orange">*</span></label>
+                <input type="email" id="nl-email" name="email" required autocomplete="email"
+                  placeholder="name@example.com"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-brown/15 text-brown placeholder-brown/35 focus:outline-none focus:border-orange focus:ring-2 focus:ring-orange/25 transition-all">
+                <p data-error-for="nl-email" class="hidden text-xs text-orange mt-1.5">Моля, въведи валиден имейл адрес.
+                </p>
+              </div>
+
+              <div>
+                <span class="block text-sm font-semibold text-brown mb-2">Отнася ли се за теб?
+                  <span class="text-brown/40 font-normal">(по желание)</span></span>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="nl-pill cursor-pointer">
+                    <input type="checkbox" name="segment" value="practising" class="sr-only peer">
+                    <span
+                      class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl border-2 border-brown/15 bg-white text-brown/70 text-sm font-semibold text-center transition-all peer-checked:border-orange peer-checked:bg-orange/10 peer-checked:text-orange hover:border-orange/50">
+                      <svg class="nl-pill-check w-4 h-4 opacity-0 transition-opacity" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Практикувам
+                    </span>
+                  </label>
+                  <label class="nl-pill cursor-pointer">
+                    <input type="checkbox" name="segment" value="learning" class="sr-only peer">
+                    <span
+                      class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl border-2 border-brown/15 bg-white text-brown/70 text-sm font-semibold text-center transition-all peer-checked:border-orange peer-checked:bg-orange/10 peer-checked:text-orange hover:border-orange/50">
+                      <svg class="nl-pill-check w-4 h-4 opacity-0 transition-opacity" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                      Обучавам се
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit"
+                class="btn-primary w-full text-white font-semibold px-6 py-4 rounded-full text-base uppercase tracking-wide mt-2">
+                Запиши се за бюлетина
+              </button>
+
+              <p class="text-brown/40 text-xs text-center leading-relaxed">
+                Записвайки се, се съгласяваш да получаваш имейли от ColoristIQ. Можеш да се отпишеш по всяко време.
+              </p>
+            </form>
+
+            <!-- Success state (hidden by default) -->
+            <div id="newsletter-success" class="hidden text-center py-6">
+              <div class="w-16 h-16 bg-orange/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg class="w-8 h-8 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-brown mb-2">Благодарим!</h3>
+              <p class="text-brown/60 text-base leading-relaxed max-w-sm mx-auto">
+                Записахме те успешно. Ще те уведомим първи, когато ColoristIQ стартира.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer class="bg-brown py-16">
+  <footer class="bg-[#2B140B] border-t border-white/10 py-12">
     <div class="max-w-6xl mx-auto px-5">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="lg:col-span-2">
@@ -981,6 +1119,60 @@
       });
       if (!isOpen) { item.classList.add('faq-open'); answer.classList.add('open'); }
     }
+
+    // Newsletter form
+    (function () {
+      const form = document.getElementById('newsletter-form');
+      if (!form) return;
+      const success = document.getElementById('newsletter-success');
+      const nameInput = document.getElementById('nl-name');
+      const emailInput = document.getElementById('nl-email');
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Toggle the checkmark on the pill cards
+      form.querySelectorAll('.nl-pill input[type="checkbox"]').forEach(cb => {
+        const check = cb.closest('.nl-pill').querySelector('.nl-pill-check');
+        cb.addEventListener('change', () => {
+          check.classList.toggle('opacity-0', !cb.checked);
+        });
+      });
+
+      function showError(input, show) {
+        const msg = form.querySelector('[data-error-for="' + input.id + '"]');
+        if (msg) msg.classList.toggle('hidden', !show);
+        input.classList.toggle('border-orange', show);
+        input.classList.toggle('border-brown/15', !show);
+      }
+
+      // Clear error as the user types
+      [nameInput, emailInput].forEach(input => {
+        input.addEventListener('input', () => showError(input, false));
+      });
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const nameOk = nameInput.value.trim().length > 0;
+        const emailOk = emailRe.test(emailInput.value.trim());
+        showError(nameInput, !nameOk);
+        showError(emailInput, !emailOk);
+        if (!nameOk) { nameInput.focus(); return; }
+        if (!emailOk) { emailInput.focus(); return; }
+
+        // Collected data — ready to wire to a backend later.
+        const data = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          segments: [...form.querySelectorAll('input[name="segment"]:checked')].map(c => c.value),
+        };
+        // TODO: изпрати `data` към имейл услуга / API, когато платформата е готова.
+        console.log('Newsletter signup (UI only):', data);
+
+        // Show success state
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+      });
+    })();
   </script>
 </body>
 
