@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<!--
+  ПРОЕКТ: Текстът е работен вариант и трябва да бъде прегледан от юрист преди публикуване.
+  Всички места за попълване са маркирани с class="ph" — потърси "class=\"ph\"" във файла.
+  При промяна на условията обнови датите в хедъра и версията.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Общи условия – ColoristIQ</title>
+  <meta name="description" content="Общи условия за използване на уебсайта и приложението ColoristIQ.">
+  <link rel="canonical" href="/terms">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFAF5',
+            'cream-dark': '#F0E6D3',
+            brown: '#4A2010',
+            'brown-mid': '#8B4513',
+            'brown-light': '#C4885A',
+            orange: '#E8622A',
+            'orange-light': '#F4933D',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FDFAF5;
+      color: #4A2010;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #E8622A, #C8461A);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 18px rgba(232, 98, 42, .35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232, 98, 42, .5);
+    }
+
+    #navbar {
+      transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    }
+
+    #navbar.scrolled {
+      background: rgba(253, 250, 245, .97) !important;
+      box-shadow: 0 2px 24px rgba(74, 32, 16, .08);
+    }
+
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    #mobile-menu.open {
+      max-height: 360px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #FDFAF5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C4885A;
+      border-radius: 3px;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 50;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      color: #4A2010;
+      border: 1px solid rgba(74, 32, 16, .12);
+      box-shadow: 0 12px 40px rgba(43, 20, 11, .2);
+    }
+
+    @media (max-width: 640px) {
+      .cookie-banner {
+        left: .75rem;
+        right: .75rem;
+        bottom: .75rem;
+      }
+    }
+
+    /* ---------- Legal content ---------- */
+    .legal section {
+      scroll-margin-top: 7rem;
+    }
+
+    .legal section+section {
+      margin-top: 3.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(74, 32, 16, .08);
+    }
+
+    .legal h2 {
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      gap: .75rem;
+      align-items: baseline;
+    }
+
+    .legal h2 .num {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #E8622A;
+      letter-spacing: .05em;
+      flex-shrink: 0;
+    }
+
+    .legal h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 1.75rem 0 .75rem;
+    }
+
+    .legal p,
+    .legal li {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(74, 32, 16, .78);
+    }
+
+    .legal p+p {
+      margin-top: 1rem;
+    }
+
+    .legal ol.clauses {
+      counter-reset: clause;
+      margin-top: 1rem;
+    }
+
+    .legal ol.clauses>li {
+      counter-increment: clause;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .legal ol.clauses>li+li {
+      margin-top: .85rem;
+    }
+
+    .legal ol.clauses>li::before {
+      content: attr(data-section) "." counter(clause);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: .85rem;
+      font-weight: 600;
+      color: rgba(74, 32, 16, .45);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.75rem;
+    }
+
+    .legal ul.bullets {
+      margin-top: .6rem;
+      padding-left: 1.25rem;
+      list-style: disc;
+    }
+
+    .legal ul.bullets li::marker {
+      color: #E8622A;
+    }
+
+    .legal ul.bullets li+li {
+      margin-top: .35rem;
+    }
+
+    .legal a {
+      color: #C8461A;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .legal a:hover {
+      color: #E8622A;
+    }
+
+    .legal strong {
+      color: #4A2010;
+      font-weight: 600;
+    }
+
+    .summary {
+      background: #F0E6D3;
+      background: rgba(240, 230, 211, .55);
+      border-left: 3px solid #E8622A;
+      border-radius: 0 1rem 1rem 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary .summary-label {
+      display: block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #E8622A;
+      margin-bottom: .25rem;
+    }
+
+    .summary p {
+      font-size: .95rem;
+      color: #4A2010;
+    }
+
+    .callout {
+      background: #fff;
+      border: 1px solid rgba(232, 98, 42, .35);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Placeholders for company data — must be replaced before publishing */
+    .ph {
+      background: rgba(244, 147, 61, .2);
+      border-radius: .25rem;
+      padding: 0 .3rem;
+      font-weight: 600;
+      color: #8B4513;
+      white-space: nowrap;
+    }
+
+    .toc a {
+      display: block;
+      padding: .35rem 0 .35rem .9rem;
+      border-left: 2px solid rgba(74, 32, 16, .1);
+      font-size: .85rem;
+      line-height: 1.4;
+      color: rgba(74, 32, 16, .55);
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .toc a:hover {
+      color: #E8622A;
+    }
+
+    .toc a.toc-active {
+      color: #E8622A;
+      border-left-color: #E8622A;
+      font-weight: 600;
+    }
+
+    #mobile-toc summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #mobile-toc[open] .toc-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media print {
+
+      #navbar,
+      footer,
+      #cookie-banner,
+      #mobile-toc,
+      aside,
+      .no-print {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      header {
+        padding-top: 0 !important;
+        background: none !important;
+      }
+
+      .legal p,
+      .legal li {
+        font-size: 11pt;
+        color: #000;
+      }
+
+      .legal section {
+        break-inside: avoid-page;
+      }
+
+      .ph {
+        background: none;
+      }
+    }
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="overflow-x-hidden">
+
+  <a href="#content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] bg-white text-brown px-4 py-2 rounded-full shadow">Към
+    съдържанието</a>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur-md py-4">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+      <a href="/"><img src="/assets/logo.png" alt="ColoristIQ – начало" class="h-10 md:h-11"></a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown/70">
+        <a href="/#features" class="hover:text-orange transition-colors">Функции</a>
+        <a href="/#about" class="hover:text-orange transition-colors">За мен</a>
+        <a href="/#pricing" class="hover:text-orange transition-colors">Цени</a>
+        <a href="/#faq" class="hover:text-orange transition-colors">Въпроси</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="/#newsletter"
+          class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full">Уведоми ме
+          при старта</a>
+        <button id="hamburger" class="md:hidden p-2 text-brown" aria-label="Меню" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg id="ico-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="ico-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden bg-cream border-t border-brown/10">
+      <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col gap-4 text-sm font-medium">
+        <a href="/#features" class="hover:text-orange transition-colors py-1">Функции</a>
+        <a href="/#about" class="hover:text-orange transition-colors py-1">За мен</a>
+        <a href="/#pricing" class="hover:text-orange transition-colors py-1">Цени</a>
+        <a href="/#faq" class="hover:text-orange transition-colors py-1">Въпроси</a>
+        <a href="/#newsletter"
+          class="btn-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1">Уведоми
+          ме при старта</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-cream via-cream to-cream-dark">
+    <div class="max-w-6xl mx-auto px-5">
+      <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Правна информация</p>
+      <h1 class="text-4xl sm:text-5xl font-bold text-brown mb-5">Общи условия</h1>
+      <p class="text-brown/65 text-lg leading-relaxed max-w-2xl">
+        Правилата за използване на ColoristIQ. Опитахме се да ги направим ясни. Под всеки раздел има кратко резюме,
+        а пълният текст е този, който важи.
+      </p>
+      <dl class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <div class="flex gap-2">
+          <dt class="text-brown/45">В сила от:</dt>
+          <dd class="font-semibold text-brown"><span class="ph">[ДАТА]</span></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-brown/45">Последна актуализация:</dt>
+          <dd class="font-semibold text-brown"><time datetime="2026-10-12">12.10.2026 г.</time></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-brown/45">Версия:</dt>
+          <dd class="font-semibold text-brown">1.0</dd>
+        </div>
+      </dl>
+      <nav aria-label="Правни документи" class="mt-8 flex flex-wrap gap-3 no-print">
+        <a href="/terms" aria-current="page"
+          class="bg-brown text-white text-sm font-semibold px-5 py-2.5 rounded-full">Общи условия</a>
+        <a href="/privacy"
+          class="border border-brown/20 text-brown text-sm font-semibold px-5 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">Политика
+          за поверителност</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main id="content" class="py-12 sm:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-5 lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-16">
+
+      <!-- Desktop table of contents -->
+      <aside class="hidden lg:block">
+        <nav aria-label="Съдържание" class="toc sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2" data-toc>
+          <p class="text-xs font-bold uppercase tracking-widest text-brown/40 mb-4">Съдържание</p>
+          <a href="#dostavchik">1. Информация за доставчика</a>
+          <a href="#definicii">2. Определения</a>
+          <a href="#predmet">3. Предмет и приемане</a>
+          <a href="#registraciya">4. Регистрация и акаунт</a>
+          <a href="#usluga">5. Описание на услугата</a>
+          <a href="#planove">6. Планове и ограничения</a>
+          <a href="#plashtane">7. Цени, плащане и подновяване</a>
+          <a href="#otkaz">8. Прекратяване и право на отказ</a>
+          <a href="#profesionalna-otgovornost">9. Професионална отговорност</a>
+          <a href="#danni-na-klienti">10. Данни на твоите клиенти</a>
+          <a href="#sadarzhanie">11. Твоето съдържание</a>
+          <a href="#intelektualna-sobstvenost">12. Интелектуална собственост</a>
+          <a href="#dopustimo-izpolzvane">13. Допустимо използване</a>
+          <a href="#dostapnost">14. Наличност и поддръжка</a>
+          <a href="#otgovornost">15. Ограничаване на отговорността</a>
+          <a href="#prekratyavane">16. Закриване на акаунт</a>
+          <a href="#promeni">17. Промени в условията</a>
+          <a href="#spory">18. Приложимо право и спорове</a>
+          <a href="#kontakti">19. Контакти</a>
+        </nav>
+      </aside>
+
+      <div class="max-w-3xl">
+
+        <!-- Mobile table of contents -->
+        <details id="mobile-toc" class="lg:hidden mb-10 bg-cream rounded-2xl border border-brown/10">
+          <summary class="flex items-center justify-between cursor-pointer list-none px-5 py-4 font-semibold text-brown">
+            Съдържание
+            <svg class="toc-chevron w-5 h-5 text-orange transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <nav aria-label="Съдържание" class="toc px-5 pb-5" data-toc>
+            <a href="#dostavchik">1. Информация за доставчика</a>
+            <a href="#definicii">2. Определения</a>
+            <a href="#predmet">3. Предмет и приемане</a>
+            <a href="#registraciya">4. Регистрация и акаунт</a>
+            <a href="#usluga">5. Описание на услугата</a>
+            <a href="#planove">6. Планове и ограничения</a>
+            <a href="#plashtane">7. Цени, плащане и подновяване</a>
+            <a href="#otkaz">8. Прекратяване и право на отказ</a>
+            <a href="#profesionalna-otgovornost">9. Професионална отговорност</a>
+            <a href="#danni-na-klienti">10. Данни на твоите клиенти</a>
+            <a href="#sadarzhanie">11. Твоето съдържание</a>
+            <a href="#intelektualna-sobstvenost">12. Интелектуална собственост</a>
+            <a href="#dopustimo-izpolzvane">13. Допустимо използване</a>
+            <a href="#dostapnost">14. Наличност и поддръжка</a>
+            <a href="#otgovornost">15. Ограничаване на отговорността</a>
+            <a href="#prekratyavane">16. Закриване на акаунт</a>
+            <a href="#promeni">17. Промени в условията</a>
+            <a href="#spory">18. Приложимо право и спорове</a>
+            <a href="#kontakti">19. Контакти</a>
+          </nav>
+        </details>
+
+        <article class="legal">
+
+          <!-- 1 -->
+          <section id="dostavchik">
+            <h2><span class="num">01</span>Информация за доставчика</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Кой стои зад ColoristIQ и как да се свържеш с нас.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="1">Уебсайтът и приложението ColoristIQ (заедно „Платформата“) се предоставят от
+                <span class="ph">[НАИМЕНОВАНИЕ НА ДРУЖЕСТВОТО]</span>, ЕИК <span class="ph">[ЕИК]</span>,
+                със седалище и адрес на управление <span class="ph">[АДРЕС]</span> (наричано по-долу „Доставчикът“,
+                „ние“).
+              </li>
+              <li data-section="1">Адрес за кореспонденция: <span class="ph">[АДРЕС ЗА КОРЕСПОНДЕНЦИЯ]</span>.
+                Имейл: <span class="ph">[ИМЕЙЛ]</span>. Телефон: <span class="ph">[ТЕЛЕФОН]</span>.</li>
+              <li data-section="1">Идентификационен номер по ДДС: <span class="ph">[BG ДДС НОМЕР / „не е регистриран
+                  по ЗДДС“]</span>.</li>
+              <li data-section="1">Надзорни органи:
+                <ul class="bullets">
+                  <li><strong>Комисия за защита на потребителите (КЗП)</strong> — гр. София, пл. „Славейков“ № 4А,
+                    <a href="https://www.kzp.bg" target="_blank" rel="noopener">www.kzp.bg</a>.
+                  </li>
+                  <li><strong>Комисия за защита на личните данни (КЗЛД)</strong> — гр. София, бул. „Проф. Цветан
+                    Лазаров“ № 2, <a href="https://www.cpdp.bg" target="_blank" rel="noopener">www.cpdp.bg</a>.</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <!-- 2 -->
+          <section id="definicii">
+            <h2><span class="num">02</span>Определения</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Думите, които използваме в документа, и какво означават.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="2"><strong>„Платформа“</strong> — уебсайтът <span class="ph">[ДОМЕЙН]</span> и уеб приложението
+                ColoristIQ, достъпни от телефон, таблет и компютър.</li>
+              <li data-section="2"><strong>„Ползвател“</strong> — всяко лице, което е създало Акаунт и използва
+                Платформата, включително колористи, фризьори, салони и лица, които се обучават.</li>
+              <li data-section="2"><strong>„Потребител“</strong> — Ползвател, който е физическо лице и използва
+                Платформата за цели извън своята търговска или професионална дейност, по смисъла на Закона за защита
+                на потребителите.</li>
+              <li data-section="2"><strong>„Акаунт“</strong> — личният профил на Ползвателя в Платформата.</li>
+              <li data-section="2"><strong>„Клиент“</strong> — физическо лице, на което Ползвателят предоставя
+                фризьорски услуги и чиито данни Ползвателят въвежда в Платформата.</li>
+              <li data-section="2"><strong>„Клиентски профил“</strong> — записът за един Клиент, включително история,
+                бележки, снимки и формули.</li>
+              <li data-section="2"><strong>„Формула“</strong> — изчислението на продукти, количества и пропорции за
+                боядисване, генерирано от Платформата или въведено от Ползвателя.</li>
+              <li data-section="2"><strong>„План“</strong> — безплатният план „Старт“ или платеният план „Про“,
+                описани в раздел 6.</li>
+              <li data-section="2"><strong>„Съдържание на Ползвателя“</strong> — всички данни, текстове, снимки и
+                формули, които Ползвателят въвежда или запазва в Платформата.</li>
+            </ol>
+          </section>
+
+          <!-- 3 -->
+          <section id="predmet">
+            <h2><span class="num">03</span>Предмет и приемане на условията</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Като се регистрираш, приемаш тези условия. Ако не си съгласен с тях, не използвай Платформата.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="3">Тези Общи условия уреждат отношенията между Доставчика и Ползвателите при
+                използване на Платформата.</li>
+              <li data-section="3">Ползвателят приема Общите условия чрез отбелязване на изрично поле при
+                регистрация. Договорът между страните се счита за сключен от момента на създаване на Акаунта.</li>
+              <li data-section="3">Текстът на Общите условия е достъпен постоянно на адрес
+                <a href="/terms">/terms</a> и може да бъде запазен или отпечатан. Договорът се сключва на български
+                език.</li>
+              <li data-section="3">Обработването на лични данни е уредено в
+                <a href="/privacy">Политиката за поверителност</a>, която е неразделна част от тези Общи условия.
+              </li>
+              <li data-section="3">Използването само на публичния уебсайт и абонаментът за бюлетина не изискват
+                регистрация. За тях се прилагат разделите, които по естеството си се отнасят до тях.</li>
+            </ol>
+          </section>
+
+          <!-- 4 -->
+          <section id="registraciya">
+            <h2><span class="num">04</span>Регистрация и акаунт</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Трябва да си на поне 18 години, да даваш верни данни и да пазиш паролата си. Един акаунт е за един
+                човек.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="4">Регистрация може да направи лице, навършило 18 години.</li>
+              <li data-section="4">Ползвателят се задължава да предостави вярна и актуална информация и да я
+                поддържа актуална.</li>
+              <li data-section="4">Ползвателят отговаря за опазването на данните си за вход и за всички действия,
+                извършени чрез неговия Акаунт. При съмнение за неоторизиран достъп Ползвателят следва незабавно да
+                уведоми Доставчика.</li>
+              <li data-section="4">Акаунтът е личен и не може да се споделя или преотстъпва на трети лица. За
+                ползване от няколко колористи в един салон всеки следва да има собствен Акаунт.</li>
+            </ol>
+          </section>
+
+          <!-- 5 -->
+          <section id="usluga">
+            <h2><span class="num">05</span>Описание на услугата</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>ColoristIQ е онлайн инструмент за клиентски профили, история, календар и изчисляване на формули.
+                Може да добавяме и подобряваме функции с времето.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="5">Платформата е цифрова услуга, която позволява на Ползвателя да:
+                <ul class="bullets">
+                  <li>създава и управлява Клиентски профили и тяхната история;</li>
+                  <li>генерира и запазва Формули с изчисление на количества и пропорции;</li>
+                  <li>работи с продукти на различни марки или без конкретна марка;</li>
+                  <li>използва календар за планиране на посещения.</li>
+                </ul>
+              </li>
+              <li data-section="5">Платформата се използва чрез съвременен уеб браузър и изисква интернет връзка.
+                Ползвателят сам осигурява необходимото устройство и връзка.</li>
+              <li data-section="5">Доставчикът може да развива Платформата, като добавя, променя или премахва
+                функционалности. Ако промяна съществено ограничава функциите на платен План, се прилага раздел 17.
+              </li>
+              <li data-section="5">Данните за продуктите на трети марки се използват само с информационна цел.
+                Наименованията и търговските марки принадлежат на съответните им притежатели и Доставчикът не е
+                свързан с тях.</li>
+            </ol>
+          </section>
+
+          <!-- 6 -->
+          <section id="planove">
+            <h2><span class="num">06</span>Планове и ограничения</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>„Старт“ е безплатен с ограничения. „Про“ е платен и без ограничения. При достигане на лимита
+                данните ти остават, но за нови клиенти или формули трябва „Про“.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="6"><strong>План „Старт“</strong> (безплатен, безсрочен) включва: клиентско табло,
+                календар, история на клиентите, до 6 (шест) Клиентски профила и до 4 (четири) генерирани Формули на
+                календарен месец.</li>
+              <li data-section="6"><strong>План „Про“</strong> (платен) включва всички функции на „Старт“ и
+                неограничен брой Клиентски профили и Формули, при спазване на раздел 13.</li>
+              <li data-section="6">При достигане на лимитите на план „Старт“ Ползвателят запазва достъп до
+                съществуващите Клиентски профили и Формули, но не може да създава нови, докато не премине към „Про“
+                или докато не започне нов календарен месец (за Формулите).</li>
+              <li data-section="6">Преминаването от „Старт“ към „Про“ е възможно по всяко време, без загуба на
+                данни.</li>
+              <li data-section="6">При връщане от „Про“ към „Старт“ всички данни се запазват и остават достъпни за
+                преглед. Създаването на нови записи се подчинява на лимитите на „Старт“.</li>
+              <li data-section="6">Доставчикът може да предлага промоционални условия или пробни периоди, чиито
+                правила се обявяват отделно.</li>
+            </ol>
+          </section>
+
+          <!-- 7 -->
+          <section id="plashtane">
+            <h2><span class="num">07</span>Цени, плащане и подновяване</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>„Про“ струва 15 € на месец или 120 € за година. Абонаментът се подновява автоматично, докато не го
+                спреш. Ще те уведомим поне 30 дни преди промяна в цената.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="7">Цените на план „Про“ са:
+                <ul class="bullets">
+                  <li>месечен абонамент — 15 € на месец;</li>
+                  <li>годишен абонамент — 120 €, платими еднократно за 12 месеца (равностойност на 10 € на месец).
+                  </li>
+                </ul>
+                Цените са <span class="ph">[с включен ДДС / без ДДС — уточни]</span>. Актуалните цени винаги са
+                посочени на <a href="/#pricing">страницата с цени</a> и преди потвърждаване на поръчката.
+              </li>
+              <li data-section="7">Плащането се извършва с банкова карта или друг способ, предложен при поръчката,
+                чрез доставчика на платежни услуги <span class="ph">[ДОСТАВЧИК НА ПЛАЩАНИЯ, напр. Stripe]</span>.
+                Доставчикът не съхранява пълните данни за банковата карта.</li>
+              <li data-section="7">Абонаментът се плаща авансово за всеки период и <strong>се подновява
+                  автоматично</strong> за същия срок, освен ако Ползвателят не го прекрати преди края на текущия
+                период. Преди подновяване на годишен абонамент Доставчикът изпраща напомняне по имейл.</li>
+              <li data-section="7">Доставчикът издава фактура или друг счетоводен документ за всяко плащане и го
+                предоставя по електронен път.</li>
+              <li data-section="7">При неуспешно плащане Доставчикът може да опита повторно таксуване. Ако
+                плащането остане неуспешно, Акаунтът преминава към план „Старт“, без загуба на данни.</li>
+              <li data-section="7">Доставчикът може да променя цените, като уведоми Ползвателите по имейл най-малко
+                30 дни предварително. Новата цена се прилага от следващия период на подновяване. Ползвателят, който
+                не е съгласен, може да прекрати абонамента преди тази дата.</li>
+            </ol>
+          </section>
+
+          <!-- 8 -->
+          <section id="otkaz">
+            <h2><span class="num">08</span>Прекратяване на абонамента и право на отказ</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Можеш да спреш абонамента по всяко време, като той остава активен до края на платения период. Ако
+                си Потребител, имаш 14 дни да се откажеш от договора.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="8">Ползвателят може да прекрати автоматичното подновяване по всяко време от
+                настройките на Акаунта или с имейл до <span class="ph">[ИМЕЙЛ]</span>. Абонаментът остава активен до
+                края на вече платения период, след което Акаунтът преминава към план „Старт“.</li>
+              <li data-section="8">Освен в случаите по т. 8.3 и в предвидените от закона случаи, суми за започнал
+                период не се възстановяват.</li>
+              <li data-section="8"><strong>Право на отказ за Потребители.</strong> Потребителят има право да се
+                откаже от договора за платен План в срок от 14 дни от сключването му, без да посочва причина и без
+                да дължи обезщетение или неустойка. Правото се упражнява чрез ясно заявление, изпратено на
+                <span class="ph">[ИМЕЙЛ]</span>, или чрез стандартния формуляр за отказ по Закона за защита на
+                потребителите.</li>
+              <li data-section="8">При поръчка Потребителят изрично заявява дали желае предоставянето на услугата да
+                започне преди изтичането на 14-дневния срок. Ако е поискал това и упражни правото си на отказ,
+                Потребителят дължи сума, пропорционална на ползваната до момента на отказа услуга, а остатъкът се
+                възстановява в срок до 14 дни по същия начин, по който е платен.</li>
+              <li data-section="8">Правото на отказ по т. 8.3 не се прилага за Ползватели, които сключват договора
+                в качеството си на търговци или за целите на професионалната си дейност, освен ако приложимото право
+                не предвижда друго.</li>
+            </ol>
+          </section>
+
+          <!-- 9 -->
+          <section id="profesionalna-otgovornost">
+            <h2><span class="num">09</span>Професионална отговорност на Ползвателя</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>ColoristIQ ти помага, но не те замества. Ти носиш отговорност за теста за алергия, избора на
+                продукти и крайния резултат.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="9">Платформата е помощен инструмент за професионалисти и лица, които се обучават.
+                Тя не замества професионалната преценка, обучението и опита на Ползвателя.</li>
+              <li data-section="9">Формулите се изчисляват на базата на въведените от Ползвателя данни и общи
+                принципи на колористиката. Резултатът от боядисването зависи от фактори, които Платформата не може да
+                установи, включително състоянието и историята на косата, предишни химически обработки, време на
+                въздействие, температура, начин на нанасяне и характеристики на конкретния продукт.</li>
+              <li data-section="9">Ползвателят е единствено отговорен:
+                <ul class="bullets">
+                  <li>да провери всяка Формула преди прилагането ѝ;</li>
+                  <li>да извърши тест за алергична реакция и тестов кичур съгласно инструкциите на производителя;
+                  </li>
+                  <li>да спазва инструкциите за безопасност на използваните продукти;</li>
+                  <li>да информира Клиента и да получи необходимото му съгласие за услугата;</li>
+                  <li>за крайния резултат от услугата, която предоставя.</li>
+                </ul>
+              </li>
+              <li data-section="9">Посочените на уебсайта резултати от тестове на точността на Формулите описват
+                конкретни тестови условия и не представляват гаранция за резултата във всеки отделен случай.</li>
+            </ol>
+          </section>
+
+          <!-- 10 -->
+          <section id="danni-na-klienti">
+            <h2><span class="num">10</span>Данни на твоите клиенти</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Данните на клиентите ти са твои. Ти решаваш какво да въведеш и отговаряш за законното им събиране.
+                Ние ги пазим и обработваме само за да работи приложението.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="10">По отношение на личните данни на Клиентите, въведени в Платформата, Ползвателят
+                е <strong>администратор</strong>, а Доставчикът е <strong>обработващ лични данни</strong> по смисъла
+                на Регламент (ЕС) 2016/679 (ОРЗД). Настоящият раздел представлява договор за обработване по чл. 28
+                от ОРЗД.</li>
+              <li data-section="10">Ползвателят гарантира, че има правно основание за въвеждането на данните на
+                Клиентите, че ги е информирал за обработването и, когато е необходимо, е получил тяхното съгласие.
+                Ползвателят следва да въвежда само данни, необходими за услугата. Данни за здравословното състояние
+                (например алергии или чувствителност на скалпа) се въвеждат само при наличие на изрично съгласие на
+                Клиента.</li>
+              <li data-section="10"><strong>Предмет и срок.</strong> Доставчикът обработва данните на Клиентите
+                (имена, данни за контакт, история на посещенията, формули, бележки и снимки, въведени от
+                Ползвателя) само за предоставяне на Платформата, за срока на договора и до изтриването им съгласно
+                раздел 16.</li>
+              <li data-section="10">Доставчикът се задължава:
+                <ul class="bullets">
+                  <li>да обработва данните само по документирани указания на Ползвателя, каквито са тези Общи
+                    условия и действията на Ползвателя в Платформата;</li>
+                  <li>да не използва данните за собствени цели, включително за реклама, и да не ги продава;</li>
+                  <li>да осигури задължение за поверителност на лицата с достъп до данните;</li>
+                  <li>да прилага подходящи технически и организационни мерки за сигурност, включително криптиране
+                    при пренос, контрол на достъпа и резервни копия;</li>
+                  <li>да подпомага Ползвателя при отговор на искания на Клиенти за упражняване на правата им;</li>
+                  <li>да уведоми Ползвателя без неоправдано забавяне, след като узнае за нарушение на сигурността
+                    на данните;</li>
+                  <li>да предостави информацията, необходима за доказване на спазването на чл. 28 от ОРЗД.</li>
+                </ul>
+              </li>
+              <li data-section="10"><strong>Подизпълнители.</strong> Ползвателят дава общо разрешение Доставчикът да
+                използва подобработващи (например доставчици на хостинг и бази данни). Актуалният списък е посочен
+                в <a href="/privacy#poluchateli">Политиката за поверителност</a>. Доставчикът уведомява
+                Ползвателите за промени в списъка, като те могат да възразят и да прекратят договора. Доставчикът
+                налага на подобработващите същите задължения за защита на данните.</li>
+              <li data-section="10">Данните се съхраняват в <span class="ph">[ДЪРЖАВА / РЕГИОН НА ХОСТИНГА, напр.
+                  ЕС]</span>. Предаване извън Европейското икономическо пространство се извършва само при наличие на
+                подходящи гаранции по глава V от ОРЗД.</li>
+            </ol>
+          </section>
+
+          <!-- 11 -->
+          <section id="sadarzhanie">
+            <h2><span class="num">11</span>Твоето съдържание</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Всичко, което въвеждаш, остава твое. Ние го използваме само за да работи услугата за теб.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="11">Ползвателят запазва всички права върху Съдържанието на Ползвателя, включително
+                създадените от него Формули.</li>
+              <li data-section="11">Ползвателят предоставя на Доставчика неизключително, безвъзмездно право да
+                съхранява, обработва и показва Съдържанието на Ползвателя само доколкото това е необходимо за
+                предоставяне на Платформата.</li>
+              <li data-section="11">Доставчикът може да използва обобщени и анонимизирани данни, от които не може да
+                бъде идентифициран Ползвател или Клиент, за подобряване на точността и функциите на Платформата.
+              </li>
+              <li data-section="11">Ползвателят отговаря за това качваните от него снимки и материали да не
+                нарушават права на трети лица, включително правото на Клиентите върху собствения им образ.</li>
+              <li data-section="11">Ползвателят може по всяко време да експортира Съдържанието си във формат, който
+                позволява повторното му използване.</li>
+            </ol>
+          </section>
+
+          <!-- 12 -->
+          <section id="intelektualna-sobstvenost">
+            <h2><span class="num">12</span>Интелектуална собственост</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Приложението, дизайнът, текстовете и обучителните материали са наши. Можеш да ги използваш, но не
+                и да ги копираш или препродаваш.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="12">Платформата, нейният софтуер, алгоритми, дизайн, лого, наименованието
+                „ColoristIQ“, текстове, видеа и обучителни материали са собственост на Доставчика или на неговите
+                лицензодатели и са защитени от Закона за авторското право и сродните му права и други приложими
+                закони.</li>
+              <li data-section="12">Доставчикът предоставя на Ползвателя неизключително, непрехвърлимо право да
+                използва Платформата за срока на договора, в съответствие с тези Общи условия и с избрания План.
+              </li>
+              <li data-section="12">Обучителните видеа, предоставени чрез бюлетина, са предназначени за лично
+                ползване и не могат да бъдат разпространявани, препродавани или публикувани без писмено съгласие на
+                Доставчика.</li>
+            </ol>
+          </section>
+
+          <!-- 13 -->
+          <section id="dopustimo-izpolzvane">
+            <h2><span class="num">13</span>Допустимо използване</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Използвай ColoristIQ за работата си, а не за злоупотреби. „Неограничено“ означава нормално
+                професионално ползване.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="13">Забранено е:
+                <ul class="bullets">
+                  <li>използването на Платформата в нарушение на закона или на права на трети лица;</li>
+                  <li>опити за неоторизиран достъп до Платформата, до чужди Акаунти или до системите на Доставчика;
+                  </li>
+                  <li>автоматизирано извличане на данни (scraping), обратно инженерство или копиране на
+                    функционалността на Платформата, освен ако законът изрично го позволява;</li>
+                  <li>натоварване на Платформата по начин, който пречи на други Ползватели;</li>
+                  <li>заобикаляне на лимитите на Плановете, включително чрез създаване на множество Акаунти;</li>
+                  <li>качване на зловреден код или незаконно съдържание.</li>
+                </ul>
+              </li>
+              <li data-section="13">„Неограничено“ в план „Про“ означава ползване в обем, обичаен за професионалната
+                дейност на колорист. При злоупотреба Доставчикът може да се свърже с Ползвателя и да предложи
+                подходящо решение.</li>
+              <li data-section="13">При съществено или повторно нарушение Доставчикът може да ограничи или спре
+                достъпа до Акаунта, след като уведоми Ползвателя и му даде разумен срок за отстраняване, освен когато
+                е необходимо незабавно действие за защита на Платформата или на трети лица.</li>
+            </ol>
+          </section>
+
+          <!-- 14 -->
+          <section id="dostapnost">
+            <h2><span class="num">14</span>Наличност и поддръжка</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Правим всичко възможно приложението да работи постоянно, но понякога може да има поддръжка или
+                прекъсвания. Помощ получаваш на български по имейл.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="14">Доставчикът полага разумни усилия Платформата да бъде достъпна непрекъснато, но
+                не гарантира работа без прекъсвания и грешки.</li>
+              <li data-section="14">Планираната поддръжка се извършва, когато е възможно, в часове с ниско
+                натоварване и при възможност се обявява предварително.</li>
+              <li data-section="14">Доставчикът прави редовни резервни копия на данните. Препоръчваме на
+                Ползвателите периодично да експортират важните си данни.</li>
+              <li data-section="14">Поддръжка се предоставя на български език на <span class="ph">[ИМЕЙЛ ЗА
+                  ПОДДРЪЖКА]</span> в рамките на <span class="ph">[РАБОТНО ВРЕМЕ]</span>.</li>
+              <li data-section="14">По отношение на Потребителите Доставчикът отговаря за съответствието на
+                цифровата услуга с договора съгласно приложимото законодателство. Този раздел не ограничава тези
+                права.</li>
+            </ol>
+          </section>
+
+          <!-- 15 -->
+          <section id="otgovornost">
+            <h2><span class="num">15</span>Ограничаване на отговорността</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Отговаряме за това, за което законът ни задължава. Не отговаряме за резултата от боядисването или
+                за косвени загуби, като пропуснати ползи.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="15">Доставчикът не носи отговорност за вреди, произтичащи от прилагането на Формули,
+                включително за увреждане на косата или скалпа или за алергични реакции, когато те се дължат на
+                неизпълнение на задълженията на Ползвателя по раздел 9, на неточни данни, въведени от Ползвателя, или
+                на характеристики на продукти на трети лица.</li>
+              <li data-section="15">Доставчикът не отговаря за пропуснати ползи, загуба на клиенти или репутация и
+                други косвени вреди, както и за вреди, причинени от обстоятелства извън неговия разумен контрол
+                (непреодолима сила, прекъсване на интернет или услуги на трети лица).</li>
+              <li data-section="15">Общата отговорност на Доставчика към Ползвател, който сключва договора за целите
+                на професионалната си дейност, е ограничена до сумата, платена от Ползвателя за последните 12
+                месеца преди събитието, довело до вредата.</li>
+              <li data-section="15">Нищо в тези Общи условия не изключва или ограничава отговорността на Доставчика
+                за вреди, причинени умишлено или при груба небрежност, за вреди на живота и здравето, както и
+                правата на Потребителите, които не могат да бъдат ограничавани по закон.</li>
+            </ol>
+          </section>
+
+          <!-- 16 -->
+          <section id="prekratyavane">
+            <h2><span class="num">16</span>Закриване на акаунт и съдба на данните</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Можеш да изтриеш акаунта си по всяко време. Преди това можеш да изтеглиш данните си. След
+                изтриване ги премахваме окончателно.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="16">Ползвателят може да закрие Акаунта си по всяко време от настройките или с
+                искане на <span class="ph">[ИМЕЙЛ]</span>. Закриването на Акаунта прекратява договора. Раздел 8
+                се прилага за платени, но неизползвани периоди.</li>
+              <li data-section="16">Доставчикът може да прекрати договора с 30-дневно предизвестие по имейл, или
+                незабавно при съществено нарушение по раздел 13. При прекратяване по инициатива на Доставчика без
+                вина на Ползвателя, платената сума за неизползвания период се възстановява.</li>
+              <li data-section="16">Преди закриване Ползвателят може да експортира данните си. След закриване
+                Съдържанието на Ползвателя, включително данните на Клиентите, се изтрива в срок до
+                <span class="ph">[30]</span> дни, а от резервните копия — до <span class="ph">[90]</span> дни,
+                освен ако законът не изисква по-дълго съхранение (например счетоводни документи).</li>
+              <li data-section="16">Акаунти на план „Старт“, в които няма вход повече от
+                <span class="ph">[24]</span> месеца, могат да бъдат закрити след предварително уведомление по имейл
+                най-малко 30 дни по-рано.</li>
+            </ol>
+          </section>
+
+          <!-- 17 -->
+          <section id="promeni">
+            <h2><span class="num">17</span>Промени в Общите условия</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Ако променим условията, ще те уведомим поне 30 дни предварително. Ако не си съгласен, можеш да
+                прекратиш договора без санкции.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="17">Доставчикът може да изменя тези Общи условия при промени в законодателството, в
+                Платформата или в бизнес модела.</li>
+              <li data-section="17">За съществени промени Ползвателите се уведомяват по имейл и в Платформата
+                най-малко 30 дни преди влизането им в сила. Незначителни промени (например корекции на правописа
+                или яснотата на текста) могат да влязат в сила с публикуването им.</li>
+              <li data-section="17">Ползвател, който не е съгласен с промените, може да прекрати договора преди
+                влизането им в сила, без неустойка, като за платен План получава възстановяване на сумата за
+                неизползвания период. Продължаването на ползването след тази дата означава приемане на промените.
+              </li>
+              <li data-section="17">Предишните версии на Общите условия са достъпни при поискване.</li>
+            </ol>
+          </section>
+
+          <!-- 18 -->
+          <section id="spory">
+            <h2><span class="num">18</span>Приложимо право и спорове</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Прилага се българското право. Първо се опитваме да решим въпроса заедно, а ако не успеем, има
+                помирителни комисии и съд.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="18">За неуредените в тези Общи условия въпроси се прилага българското
+                законодателство, включително Законът за задълженията и договорите, Законът за електронната
+                търговия и Законът за защита на потребителите.</li>
+              <li data-section="18">Страните ще се стремят да решават споровете по взаимно съгласие. Жалби и
+                рекламации се подават на <span class="ph">[ИМЕЙЛ]</span>, като Доставчикът отговаря в разумен срок,
+                но не по-късно от 14 дни.</li>
+              <li data-section="18">Потребителите могат да се обърнат към Комисията за защита на потребителите или
+                към помирителните комисии към нея за извънсъдебно решаване на спора
+                (<a href="https://www.kzp.bg" target="_blank" rel="noopener">www.kzp.bg</a>).</li>
+              <li data-section="18">Ако спорът не бъде решен извънсъдебно, той се отнася до компетентния български
+                съд. По отношение на Потребителите това не засяга правото им на защита пред съда по постоянния им
+                адрес и задължителните разпоредби на правото на държавата, в която пребивават.</li>
+              <li data-section="18">Ако някоя разпоредба се окаже недействителна, това не засяга действителността
+                на останалите разпоредби.</li>
+            </ol>
+          </section>
+
+          <!-- 19 -->
+          <section id="kontakti">
+            <h2><span class="num">19</span>Контакти</h2>
+            <p>За въпроси относно тези Общи условия можеш да се свържеш с нас:</p>
+            <div class="callout">
+              <p><strong><span class="ph">[НАИМЕНОВАНИЕ НА ДРУЖЕСТВОТО]</span></strong></p>
+              <p class="!mt-1">Адрес: <span class="ph">[АДРЕС]</span></p>
+              <p class="!mt-1">Имейл: <span class="ph">[ИМЕЙЛ]</span></p>
+              <p class="!mt-1">Телефон: <span class="ph">[ТЕЛЕФОН]</span></p>
+            </div>
+          </section>
+
+        </article>
+
+        <div class="mt-14 pt-8 border-t border-brown/10 flex flex-wrap items-center justify-between gap-4 no-print">
+          <a href="#content" class="text-sm font-semibold text-brown/60 hover:text-orange transition-colors">↑ Към
+            началото</a>
+          <button type="button" onclick="window.print()"
+            class="text-sm font-semibold border border-brown/20 text-brown px-5 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">
+            Отпечатай / Запази като PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2B140B] border-t border-white/10 py-12">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <p class="text-3xl text-white font-bold mb-1">ColoristIQ</p>
+          <p class="text-white/45 text-sm leading-relaxed max-w-xs">Твоето дигитално работно място за колористика. Точни
+            формули. История на клиентите. На едно място.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://www.youtube.com/@HairAlchemybyBatalska" target="_blank" rel="noopener" aria-label="YouTube"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.1c-.6.1-1.8.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2.1.3 4.2.3 4.2s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.4 12 21.4 12 21.4s4.2 0 7.1-.2c.6-.1 1.8-.1 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.2v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l7.6 3.6-7.6 3.5z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/batalska_hair" target="_blank" rel="noopener" aria-label="Instagram"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@pincodecolorist7" target="_blank" rel="noopener" aria-label="TikTok"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1-.06z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Продукт</h4>
+          <ul class="space-y-3">
+            <li><a href="/#features" class="text-white/45 text-sm hover:text-orange transition-colors">Функции</a></li>
+            <li><a href="/#pricing" class="text-white/45 text-sm hover:text-orange transition-colors">Цени</a></li>
+            <li><a href="/#faq" class="text-white/45 text-sm hover:text-orange transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Компания</h4>
+          <ul class="space-y-3">
+            <li><a href="/#about" class="text-white/45 text-sm hover:text-orange transition-colors">За мен</a></li>
+            <li><a href="/terms" aria-current="page" class="text-orange text-sm">Общи условия</a></li>
+            <li><a href="/privacy" class="text-white/45 text-sm hover:text-orange transition-colors">Поверителност</a>
+            </li>
+            <li><button type="button" id="footer-cookie-settings"
+                class="text-white/45 text-sm hover:text-orange transition-colors">Настройки за бисквитки</button></li>
+            <li><a href="/terms#kontakti" class="text-white/45 text-sm hover:text-orange transition-colors">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-white/25 text-xs">© 2026 ColoristIQ. Всички права запазени.</p>
+        <p class="text-white/25 text-xs">Направено с любов за колористи в България.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT -->
+  <section id="cookie-banner" class="cookie-banner rounded-2xl p-5 sm:p-6" role="dialog"
+    aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="false" hidden>
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-xl">
+        <h2 id="cookie-title" class="text-lg font-bold text-brown">Поверителност и бисквитки</h2>
+        <p id="cookie-description" class="text-sm text-brown/65 leading-relaxed mt-2">
+          Използваме Google Analytics, за да разберем как посетителите използват сайта и да го подобряваме.
+          Аналитичните бисквитки са изключени, докато не дадеш съгласие.
+          <a href="/privacy#biskvitki" class="underline underline-offset-2 hover:text-orange">Научи повече</a>
+        </p>
+      </div>
+      <div class="flex shrink-0 flex-col-reverse sm:flex-col gap-2 sm:min-w-32">
+        <button id="cookie-reject" type="button"
+          class="border border-brown/20 text-brown font-semibold text-sm px-4 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">
+          Отказвам
+        </button>
+        <button id="cookie-accept" type="button"
+          class="btn-primary text-white font-semibold text-sm px-4 py-2.5 rounded-full">
+          Приемам
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/legal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<!--
+  ПРОЕКТ: Текстът е работен вариант и трябва да бъде прегледан от юрист преди публикуване.
+  Всички места за попълване са маркирани с class="ph" — потърси "class=\"ph\"" във файла.
+  При промяна на условията обнови датите в хедъра и версията.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика за поверителност – ColoristIQ</title>
+  <meta name="description" content="Как ColoristIQ събира, използва и защитава личните данни.">
+  <link rel="canonical" href="/privacy">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFAF5',
+            'cream-dark': '#F0E6D3',
+            brown: '#4A2010',
+            'brown-mid': '#8B4513',
+            'brown-light': '#C4885A',
+            orange: '#E8622A',
+            'orange-light': '#F4933D',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FDFAF5;
+      color: #4A2010;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #E8622A, #C8461A);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 18px rgba(232, 98, 42, .35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(232, 98, 42, .5);
+    }
+
+    #navbar {
+      transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    }
+
+    #navbar.scrolled {
+      background: rgba(253, 250, 245, .97) !important;
+      box-shadow: 0 2px 24px rgba(74, 32, 16, .08);
+    }
+
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    #mobile-menu.open {
+      max-height: 360px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #FDFAF5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C4885A;
+      border-radius: 3px;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 50;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      color: #4A2010;
+      border: 1px solid rgba(74, 32, 16, .12);
+      box-shadow: 0 12px 40px rgba(43, 20, 11, .2);
+    }
+
+    @media (max-width: 640px) {
+      .cookie-banner {
+        left: .75rem;
+        right: .75rem;
+        bottom: .75rem;
+      }
+    }
+
+    /* ---------- Legal content ---------- */
+    .legal section {
+      scroll-margin-top: 7rem;
+    }
+
+    .legal section+section {
+      margin-top: 3.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(74, 32, 16, .08);
+    }
+
+    .legal h2 {
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      gap: .75rem;
+      align-items: baseline;
+    }
+
+    .legal h2 .num {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #E8622A;
+      letter-spacing: .05em;
+      flex-shrink: 0;
+    }
+
+    .legal h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 1.75rem 0 .75rem;
+    }
+
+    .legal p,
+    .legal li {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(74, 32, 16, .78);
+    }
+
+    .legal p+p {
+      margin-top: 1rem;
+    }
+
+    .legal ol.clauses {
+      counter-reset: clause;
+      margin-top: 1rem;
+    }
+
+    .legal ol.clauses>li {
+      counter-increment: clause;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .legal ol.clauses>li+li {
+      margin-top: .85rem;
+    }
+
+    .legal ol.clauses>li::before {
+      content: attr(data-section) "." counter(clause);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: .85rem;
+      font-weight: 600;
+      color: rgba(74, 32, 16, .45);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.75rem;
+    }
+
+    .legal ul.bullets {
+      margin-top: .6rem;
+      padding-left: 1.25rem;
+      list-style: disc;
+    }
+
+    .legal ul.bullets li::marker {
+      color: #E8622A;
+    }
+
+    .legal ul.bullets li+li {
+      margin-top: .35rem;
+    }
+
+    .legal a {
+      color: #C8461A;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .legal a:hover {
+      color: #E8622A;
+    }
+
+    .legal strong {
+      color: #4A2010;
+      font-weight: 600;
+    }
+
+    .summary {
+      background: #F0E6D3;
+      background: rgba(240, 230, 211, .55);
+      border-left: 3px solid #E8622A;
+      border-radius: 0 1rem 1rem 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary .summary-label {
+      display: block;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #E8622A;
+      margin-bottom: .25rem;
+    }
+
+    .summary p {
+      font-size: .95rem;
+      color: #4A2010;
+    }
+
+    .callout {
+      background: #fff;
+      border: 1px solid rgba(232, 98, 42, .35);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Placeholders for company data — must be replaced before publishing */
+    .ph {
+      background: rgba(244, 147, 61, .2);
+      border-radius: .25rem;
+      padding: 0 .3rem;
+      font-weight: 600;
+      color: #8B4513;
+      white-space: nowrap;
+    }
+
+    .toc a {
+      display: block;
+      padding: .35rem 0 .35rem .9rem;
+      border-left: 2px solid rgba(74, 32, 16, .1);
+      font-size: .85rem;
+      line-height: 1.4;
+      color: rgba(74, 32, 16, .55);
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    .toc a:hover {
+      color: #E8622A;
+    }
+
+    .toc a.toc-active {
+      color: #E8622A;
+      border-left-color: #E8622A;
+      font-weight: 600;
+    }
+
+    #mobile-toc summary::-webkit-details-marker {
+      display: none;
+    }
+
+    #mobile-toc[open] .toc-chevron {
+      transform: rotate(180deg);
+    }
+
+    @media print {
+
+      #navbar,
+      footer,
+      #cookie-banner,
+      #mobile-toc,
+      aside,
+      .no-print {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      header {
+        padding-top: 0 !important;
+        background: none !important;
+      }
+
+      .legal p,
+      .legal li {
+        font-size: 11pt;
+        color: #000;
+      }
+
+      .legal section {
+        break-inside: avoid-page;
+      }
+
+      .ph {
+        background: none;
+      }
+    }
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="overflow-x-hidden">
+
+  <a href="#content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] bg-white text-brown px-4 py-2 rounded-full shadow">Към
+    съдържанието</a>
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur-md py-4">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+      <a href="/"><img src="/assets/logo.png" alt="ColoristIQ – начало" class="h-10 md:h-11"></a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-brown/70">
+        <a href="/#features" class="hover:text-orange transition-colors">Функции</a>
+        <a href="/#about" class="hover:text-orange transition-colors">За мен</a>
+        <a href="/#pricing" class="hover:text-orange transition-colors">Цени</a>
+        <a href="/#faq" class="hover:text-orange transition-colors">Въпроси</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="/#newsletter"
+          class="hidden sm:inline-flex btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full">Уведоми ме
+          при старта</a>
+        <button id="hamburger" class="md:hidden p-2 text-brown" aria-label="Меню" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg id="ico-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="ico-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden bg-cream border-t border-brown/10">
+      <div class="max-w-6xl mx-auto px-5 py-5 flex flex-col gap-4 text-sm font-medium">
+        <a href="/#features" class="hover:text-orange transition-colors py-1">Функции</a>
+        <a href="/#about" class="hover:text-orange transition-colors py-1">За мен</a>
+        <a href="/#pricing" class="hover:text-orange transition-colors py-1">Цени</a>
+        <a href="/#faq" class="hover:text-orange transition-colors py-1">Въпроси</a>
+        <a href="/#newsletter"
+          class="btn-primary text-white font-semibold px-5 py-3 rounded-full text-center mt-1">Уведоми
+          ме при старта</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="pt-32 pb-12 sm:pb-16 bg-gradient-to-br from-cream via-cream to-cream-dark">
+    <div class="max-w-6xl mx-auto px-5">
+      <p class="text-orange text-xs font-semibold uppercase tracking-widest mb-3">Правна информация</p>
+      <h1 class="text-4xl sm:text-5xl font-bold text-brown mb-5">Политика за поверителност</h1>
+      <p class="text-brown/65 text-lg leading-relaxed max-w-2xl">
+        Какви данни събираме, защо и как ги пазим. Под всеки раздел има кратко резюме, а пълният текст е този, който
+        важи.
+      </p>
+      <dl class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <div class="flex gap-2">
+          <dt class="text-brown/45">В сила от:</dt>
+          <dd class="font-semibold text-brown"><span class="ph">[ДАТА]</span></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-brown/45">Последна актуализация:</dt>
+          <dd class="font-semibold text-brown"><time datetime="2026-10-12">12.10.2026 г.</time></dd>
+        </div>
+        <div class="flex gap-2">
+          <dt class="text-brown/45">Версия:</dt>
+          <dd class="font-semibold text-brown">1.0</dd>
+        </div>
+      </dl>
+      <nav aria-label="Правни документи" class="mt-8 flex flex-wrap gap-3 no-print">
+        <a href="/terms"
+          class="border border-brown/20 text-brown text-sm font-semibold px-5 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">Общи
+          условия</a>
+        <a href="/privacy" aria-current="page"
+          class="bg-brown text-white text-sm font-semibold px-5 py-2.5 rounded-full">Политика за поверителност</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main id="content" class="py-12 sm:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-5 lg:grid lg:grid-cols-[230px_minmax(0,1fr)] lg:gap-16">
+
+      <!-- Desktop table of contents -->
+      <aside class="hidden lg:block">
+        <nav aria-label="Съдържание" class="toc sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2" data-toc>
+          <p class="text-xs font-bold uppercase tracking-widest text-brown/40 mb-4">Съдържание</p>
+          <a href="#administrator">1. Администратор</a>
+          <a href="#obhvat">2. Обхват</a>
+          <a href="#danni">3. Какви данни обработваме</a>
+          <a href="#biskvitki">4. Бисквитки и аналитика</a>
+          <a href="#poluchateli">5. Получатели и подобработващи</a>
+          <a href="#predavane">6. Предаване извън ЕИП</a>
+          <a href="#srokove">7. Срокове на съхранение</a>
+          <a href="#prava">8. Твоите права</a>
+          <a href="#sigurnost">9. Сигурност</a>
+          <a href="#deca">10. Деца</a>
+          <a href="#promeni">11. Промени</a>
+          <a href="#kontakti">12. Контакти</a>
+        </nav>
+      </aside>
+
+      <div class="max-w-3xl">
+
+        <!-- Mobile table of contents -->
+        <details id="mobile-toc" class="lg:hidden mb-10 bg-cream rounded-2xl border border-brown/10">
+          <summary class="flex items-center justify-between cursor-pointer list-none px-5 py-4 font-semibold text-brown">
+            Съдържание
+            <svg class="toc-chevron w-5 h-5 text-orange transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <nav aria-label="Съдържание" class="toc px-5 pb-5" data-toc>
+            <a href="#administrator">1. Администратор</a>
+            <a href="#obhvat">2. Обхват</a>
+            <a href="#danni">3. Какви данни обработваме</a>
+            <a href="#biskvitki">4. Бисквитки и аналитика</a>
+            <a href="#poluchateli">5. Получатели и подобработващи</a>
+            <a href="#predavane">6. Предаване извън ЕИП</a>
+            <a href="#srokove">7. Срокове на съхранение</a>
+            <a href="#prava">8. Твоите права</a>
+            <a href="#sigurnost">9. Сигурност</a>
+            <a href="#deca">10. Деца</a>
+            <a href="#promeni">11. Промени</a>
+            <a href="#kontakti">12. Контакти</a>
+          </nav>
+        </details>
+
+        <article class="legal">
+
+          <!-- 1 -->
+          <section id="administrator">
+            <h2><span class="num">01</span>Администратор на лични данни</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Ние отговаряме за данните, които събираме за теб. Ето как да се свържеш с нас.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="1">Администратор на личните данни е <span class="ph">[НАИМЕНОВАНИЕ НА
+                  ДРУЖЕСТВОТО]</span>, ЕИК <span class="ph">[ЕИК]</span>, със седалище и адрес на управление
+                <span class="ph">[АДРЕС]</span>, имейл <span class="ph">[ИМЕЙЛ]</span> („ние“).</li>
+              <li data-section="1">Обработваме личните данни в съответствие с Регламент (ЕС) 2016/679 (ОРЗД) и
+                Закона за защита на личните данни.</li>
+              <li data-section="1">Длъжностно лице по защита на данните: <span class="ph">[ИМЕ И ИМЕЙЛ / „не е
+                  назначено“]</span>.</li>
+            </ol>
+          </section>
+
+          <!-- 2 -->
+          <section id="obhvat">
+            <h2><span class="num">02</span>Обхват на политиката</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Тази политика описва твоите данни. Данните на твоите клиенти в приложението са твоя отговорност, а
+                ние ги обработваме само от твое име.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="2">Политиката се прилага за личните данни на посетителите на уебсайта, абонатите на
+                бюлетина и регистрираните Ползватели на приложението ColoristIQ.</li>
+              <li data-section="2">За данните на Клиентите, които Ползвателите въвеждат в приложението, Ползвателят
+                е администратор, а ние сме обработващ лични данни. Тези отношения са уредени в
+                <a href="/terms#danni-na-klienti">раздел 10 от Общите условия</a>. Ако си клиент на колорист,
+                който използва ColoristIQ, и имаш въпрос за данните си, свържи се първо със своя колорист.</li>
+            </ol>
+          </section>
+
+          <!-- 3 -->
+          <section id="danni">
+            <h2><span class="num">03</span>Какви данни обработваме и защо</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Събираме само това, което ни трябва: имейл и име за бюлетина, данни за акаунта и плащанията за
+                приложението и анонимна статистика за сайта, ако се съгласиш.</p>
+            </div>
+
+            <div class="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0 mt-4">
+              <table class="w-full min-w-[640px] text-sm text-left border-collapse">
+                <caption class="sr-only">Цели, данни, правно основание и срок на съхранение</caption>
+                <thead>
+                  <tr class="border-b-2 border-brown/15 text-brown">
+                    <th scope="col" class="py-3 pr-4 font-semibold">Цел</th>
+                    <th scope="col" class="py-3 pr-4 font-semibold">Данни</th>
+                    <th scope="col" class="py-3 pr-4 font-semibold">Правно основание</th>
+                    <th scope="col" class="py-3 font-semibold">Срок</th>
+                  </tr>
+                </thead>
+                <tbody class="text-brown/75 align-top">
+                  <tr class="border-b border-brown/10">
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Бюлетин и обучително видео</th>
+                    <td class="py-3 pr-4">Име, имейл, отбелязан профил („Практикувам“ / „Обучавам се“), дата на
+                      абонамента, отваряне на имейлите</td>
+                    <td class="py-3 pr-4">Съгласие (чл. 6, ал. 1, б. „а“ ОРЗД)</td>
+                    <td class="py-3">До отписване</td>
+                  </tr>
+                  <tr class="border-b border-brown/10">
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Акаунт в приложението</th>
+                    <td class="py-3 pr-4">Име, имейл, парола (криптирана), настройки, Съдържание на Ползвателя</td>
+                    <td class="py-3 pr-4">Изпълнение на договор (чл. 6, ал. 1, б. „б“)</td>
+                    <td class="py-3">До закриване на акаунта + срока по т. 7.2</td>
+                  </tr>
+                  <tr class="border-b border-brown/10">
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Плащания и фактуриране</th>
+                    <td class="py-3 pr-4">Име, адрес за фактуриране, ЕИК/ДДС номер (ако е приложимо), история на
+                      плащанията. Данните за картата се обработват от доставчика на плащания.</td>
+                    <td class="py-3 pr-4">Договор и законово задължение (чл. 6, ал. 1, б. „б“ и „в“)</td>
+                    <td class="py-3">10 години (Закон за счетоводството)</td>
+                  </tr>
+                  <tr class="border-b border-brown/10">
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Поддръжка и кореспонденция</th>
+                    <td class="py-3 pr-4">Имейл, съдържание на съобщенията</td>
+                    <td class="py-3 pr-4">Договор или законен интерес (б. „б“ и „е“)</td>
+                    <td class="py-3">До 2 години след последния контакт</td>
+                  </tr>
+                  <tr class="border-b border-brown/10">
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Статистика за уебсайта</th>
+                    <td class="py-3 pr-4">Посетени страници, тип устройство и браузър, приблизително
+                      местоположение, идентификатор в бисквитка</td>
+                    <td class="py-3 pr-4">Съгласие (б. „а“)</td>
+                    <td class="py-3">14 месеца</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="py-3 pr-4 font-semibold text-brown">Сигурност и работа на сайта</th>
+                    <td class="py-3 pr-4">IP адрес, технически записи (логове)</td>
+                    <td class="py-3 pr-4">Законен интерес (б. „е“) — защита от злоупотреби и отстраняване на грешки
+                    </td>
+                    <td class="py-3">До <span class="ph">[30]</span> дни</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol class="clauses">
+              <li data-section="3">Не продаваме лични данни и не ги използваме за персонализирана реклама.</li>
+              <li data-section="3">Не вземаме решения, основани единствено на автоматизирано обработване, които
+                пораждат правни последици за теб.</li>
+              <li data-section="3">Предоставянето на данните за акаунта е необходимо за сключване на договора. Без
+                тях не можем да предоставим приложението. Абонаментът за бюлетина е доброволен.</li>
+            </ol>
+          </section>
+
+          <!-- 4 -->
+          <section id="biskvitki">
+            <h2><span class="num">04</span>Бисквитки и аналитика</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Използваме Google Analytics само ако натиснеш „Приемам“. Можеш да промениш решението си по всяко
+                време.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="4"><strong>Необходими.</strong> Запазваме избора ти за бисквитките в локалното
+                хранилище на браузъра (ключ <code class="text-xs bg-cream px-1.5 py-0.5 rounded">coloristiq-analytics-consent</code>),
+                за да не те питаме при всяко посещение. Това не изисква съгласие.</li>
+              <li data-section="4"><strong>Аналитични.</strong> С твое съгласие Google Analytics поставя бисквитки
+                (<code class="text-xs bg-cream px-1.5 py-0.5 rounded">_ga</code>,
+                <code class="text-xs bg-cream px-1.5 py-0.5 rounded">_ga_*</code>) със срок до 2 години, за да
+                разберем колко посетители има сайтът и кои страници ги интересуват.</li>
+              <li data-section="4">Използваме режима за съгласие на Google (Consent Mode). Докато не дадеш съгласие,
+                бисквитки за аналитика не се поставят, но Google може да получи ограничени технически сигнали без
+                бисквитки (например, че страницата е заредена), които се използват за обобщена статистика.</li>
+              <li data-section="4">Не използваме рекламни бисквитки.</li>
+              <li data-section="4">Можеш да промениш избора си по всяко време чрез
+                <button type="button" data-open-cookie-settings
+                  class="font-semibold text-[#C8461A] underline underline-offset-[3px] hover:text-orange">Настройки
+                  за бисквитки</button>. При отказ изтриваме аналитичните бисквитки.</li>
+            </ol>
+          </section>
+
+          <!-- 5 -->
+          <section id="poluchateli">
+            <h2><span class="num">05</span>Получатели и подобработващи</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Работим с няколко доверени доставчика, които ни помагат да поддържаме сайта и приложението. Те
+                нямат право да използват данните ти за свои цели.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="5">Предоставяме данни само на доставчици, с които имаме договор за обработване:
+                <ul class="bullets">
+                  <li><strong>Vercel Inc.</strong> (САЩ) — хостинг на уебсайта;</li>
+                  <li><strong>Google Ireland Ltd. / Google LLC</strong> — Google Analytics (само със съгласие) и
+                    Google Fonts (шрифтове, при зареждането на които браузърът ти изпраща IP адреса си до Google);
+                  </li>
+                  <li><strong>Loops</strong> (САЩ) — изпращане на бюлетина и управление на абонатите;</li>
+                  <li><strong>Tailwind CSS CDN</strong> — зареждане на стиловете на сайта (IP адрес и технически
+                    данни при зареждане);</li>
+                  <li><span class="ph">[ДОСТАВЧИК НА ХОСТИНГ / БАЗА ДАННИ ЗА ПРИЛОЖЕНИЕТО]</span> — съхранение на
+                    данните в приложението;</li>
+                  <li><span class="ph">[ДОСТАВЧИК НА ПЛАЩАНИЯ]</span> — обработка на плащания;</li>
+                  <li><span class="ph">[СЧЕТОВОДИТЕЛ / СЧЕТОВОДНА ФИРМА]</span> — водене на счетоводството.</li>
+                </ul>
+              </li>
+              <li data-section="5">Можем да предоставим данни на държавни органи, когато това се изисква от закона.
+              </li>
+            </ol>
+          </section>
+
+          <!-- 6 -->
+          <section id="predavane">
+            <h2><span class="num">06</span>Предаване извън ЕИП</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Някои доставчици са в САЩ. Работим само с такива, които осигуряват защита, равностойна на тази в
+                ЕС.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="6">Някои от доставчиците по раздел 5 са установени в САЩ или имат достъп до данни
+                от там. Предаването се извършва въз основа на Рамката за защита на данните ЕС–САЩ (EU-U.S. Data
+                Privacy Framework), когато доставчикът е сертифициран по нея, или въз основа на стандартни договорни
+                клаузи, одобрени от Европейската комисия.</li>
+              <li data-section="6">Можеш да поискаш копие от приложимите гаранции на имейла по раздел 12.</li>
+            </ol>
+          </section>
+
+          <!-- 7 -->
+          <section id="srokove">
+            <h2><span class="num">07</span>Срокове на съхранение</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Пазим данните само докато ни трябват или докато законът го изисква.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="7">Сроковете за всяка цел са посочени в таблицата в раздел 3.</li>
+              <li data-section="7">След закриване на акаунта изтриваме данните в него в срок до
+                <span class="ph">[30]</span> дни, а от резервните копия — до <span class="ph">[90]</span> дни.
+                Счетоводните документи се пазят 10 години, както изисква законът.</li>
+              <li data-section="7">След изтичане на срока данните се изтриват или анонимизират необратимо.</li>
+            </ol>
+          </section>
+
+          <!-- 8 -->
+          <section id="prava">
+            <h2><span class="num">08</span>Твоите права</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Можеш да видиш, коригираш, изтеглиш или изтриеш данните си и да оттеглиш съгласието си. Пиши ни, ще
+                отговорим до един месец.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="8">Съгласно ОРЗД имаш право на:
+                <ul class="bullets">
+                  <li><strong>достъп</strong> до данните си и копие от тях;</li>
+                  <li><strong>коригиране</strong> на неточни данни;</li>
+                  <li><strong>изтриване</strong> („право да бъдеш забравен“);</li>
+                  <li><strong>ограничаване</strong> на обработването;</li>
+                  <li><strong>преносимост</strong> — да получиш данните си в машинночетим формат;</li>
+                  <li><strong>възражение</strong> срещу обработване, основано на законен интерес;</li>
+                  <li><strong>оттегляне на съгласието</strong> по всяко време, без това да засяга законността на
+                    обработването преди оттеглянето. От бюлетина можеш да се отпишеш чрез линка във всеки имейл.
+                  </li>
+                </ul>
+              </li>
+              <li data-section="8">Исканията се изпращат на <span class="ph">[ИМЕЙЛ]</span>. Отговаряме в срок от
+                един месец. При сложни искания срокът може да бъде удължен с още два месеца, за което ще те
+                уведомим. Може да поискаме да потвърдиш самоличността си.</li>
+              <li data-section="8">Имаш право да подадеш жалба до Комисията за защита на личните данни — гр. София
+                1592, бул. „Проф. Цветан Лазаров“ № 2,
+                <a href="https://www.cpdp.bg" target="_blank" rel="noopener">www.cpdp.bg</a>, или до надзорния орган
+                в държавата, в която пребиваваш.</li>
+            </ol>
+          </section>
+
+          <!-- 9 -->
+          <section id="sigurnost">
+            <h2><span class="num">09</span>Сигурност</h2>
+            <div class="summary">
+              <span class="summary-label">Накратко</span>
+              <p>Защитаваме данните с криптиране, ограничен достъп и резервни копия.</p>
+            </div>
+            <ol class="clauses">
+              <li data-section="9">Прилагаме подходящи технически и организационни мерки, включително криптирана
+                връзка (HTTPS), криптирано съхранение на паролите, контрол на достъпа на принципа „необходимост да
+                знае“ и редовни резервни копия.</li>
+              <li data-section="9">При нарушение на сигурността, което може да застраши правата ти, ще уведомим
+                КЗЛД в срок до 72 часа и, когато е необходимо, ще уведомим и теб.</li>
+            </ol>
+          </section>
+
+          <!-- 10 -->
+          <section id="deca">
+            <h2><span class="num">10</span>Деца</h2>
+            <ol class="clauses">
+              <li data-section="10">Уебсайтът и приложението не са предназначени за лица под 18 години и не
+                събираме съзнателно техни данни. Ако смяташ, че такива данни са ни предоставени, свържи се с нас и ще
+                ги изтрием.</li>
+            </ol>
+          </section>
+
+          <!-- 11 -->
+          <section id="promeni">
+            <h2><span class="num">11</span>Промени в политиката</h2>
+            <ol class="clauses">
+              <li data-section="11">Можем да актуализираме тази политика. Датата на последната промяна е посочена
+                в горната част на страницата. При съществени промени ще уведомим регистрираните Ползватели и
+                абонатите по имейл.</li>
+            </ol>
+          </section>
+
+          <!-- 12 -->
+          <section id="kontakti">
+            <h2><span class="num">12</span>Контакти</h2>
+            <p>За въпроси относно личните ти данни:</p>
+            <div class="callout">
+              <p><strong><span class="ph">[НАИМЕНОВАНИЕ НА ДРУЖЕСТВОТО]</span></strong></p>
+              <p class="!mt-1">Адрес: <span class="ph">[АДРЕС]</span></p>
+              <p class="!mt-1">Имейл: <span class="ph">[ИМЕЙЛ]</span></p>
+            </div>
+          </section>
+
+        </article>
+
+        <div class="mt-14 pt-8 border-t border-brown/10 flex flex-wrap items-center justify-between gap-4 no-print">
+          <a href="#content" class="text-sm font-semibold text-brown/60 hover:text-orange transition-colors">↑ Към
+            началото</a>
+          <button type="button" onclick="window.print()"
+            class="text-sm font-semibold border border-brown/20 text-brown px-5 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">
+            Отпечатай / Запази като PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2B140B] border-t border-white/10 py-12">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="lg:col-span-2">
+          <p class="text-3xl text-white font-bold mb-1">ColoristIQ</p>
+          <p class="text-white/45 text-sm leading-relaxed max-w-xs">Твоето дигитално работно място за колористика. Точни
+            формули. История на клиентите. На едно място.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://www.youtube.com/@HairAlchemybyBatalska" target="_blank" rel="noopener" aria-label="YouTube"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23 7s-.3-1.9-1.1-2.7c-1.1-1.1-2.3-1.1-2.8-1.2C16.2 3 12 3 12 3s-4.2 0-7.1.1c-.6.1-1.8.1-2.8 1.2C1.3 5.1 1 7 1 7S.7 9.1.7 11.2v2c0 2.1.3 4.2.3 4.2s.3 1.9 1.1 2.7c1.1 1.1 2.5 1.1 3.1 1.2C7.2 21.4 12 21.4 12 21.4s4.2 0 7.1-.2c.6-.1 1.8-.1 2.8-1.2.8-.8 1.1-2.7 1.1-2.7s.3-2.1.3-4.2v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l7.6 3.6-7.6 3.5z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/batalska_hair" target="_blank" rel="noopener" aria-label="Instagram"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@pincodecolorist7" target="_blank" rel="noopener" aria-label="TikTok"
+              class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white/50 hover:bg-orange hover:text-white transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 106.34 6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1-.06z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Продукт</h4>
+          <ul class="space-y-3">
+            <li><a href="/#features" class="text-white/45 text-sm hover:text-orange transition-colors">Функции</a></li>
+            <li><a href="/#pricing" class="text-white/45 text-sm hover:text-orange transition-colors">Цени</a></li>
+            <li><a href="/#faq" class="text-white/45 text-sm hover:text-orange transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Компания</h4>
+          <ul class="space-y-3">
+            <li><a href="/#about" class="text-white/45 text-sm hover:text-orange transition-colors">За мен</a></li>
+            <li><a href="/terms" class="text-white/45 text-sm hover:text-orange transition-colors">Общи условия</a></li>
+            <li><a href="/privacy" aria-current="page" class="text-orange text-sm">Поверителност</a>
+            </li>
+            <li><button type="button" id="footer-cookie-settings"
+                class="text-white/45 text-sm hover:text-orange transition-colors">Настройки за бисквитки</button></li>
+            <li><a href="/terms#kontakti" class="text-white/45 text-sm hover:text-orange transition-colors">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-white/25 text-xs">© 2026 ColoristIQ. Всички права запазени.</p>
+        <p class="text-white/25 text-xs">Направено с любов за колористи в България.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT -->
+  <section id="cookie-banner" class="cookie-banner rounded-2xl p-5 sm:p-6" role="dialog"
+    aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="false" hidden>
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-xl">
+        <h2 id="cookie-title" class="text-lg font-bold text-brown">Поверителност и бисквитки</h2>
+        <p id="cookie-description" class="text-sm text-brown/65 leading-relaxed mt-2">
+          Използваме Google Analytics, за да разберем как посетителите използват сайта и да го подобряваме.
+          Аналитичните бисквитки са изключени, докато не дадеш съгласие.
+          <a href="#biskvitki" class="underline underline-offset-2 hover:text-orange">Научи повече</a>
+        </p>
+      </div>
+      <div class="flex shrink-0 flex-col-reverse sm:flex-col gap-2 sm:min-w-32">
+        <button id="cookie-reject" type="button"
+          class="border border-brown/20 text-brown font-semibold text-sm px-4 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">
+          Отказвам
+        </button>
+        <button id="cookie-accept" type="button"
+          class="btn-primary text-white font-semibold text-sm px-4 py-2.5 rounded-full">
+          Приемам
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/legal.js"></script>
+</body>
+
+</html>
