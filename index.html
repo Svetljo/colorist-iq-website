@@ -2,16 +2,6 @@
 <html lang="bg">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BEMRYF0NV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-8BEMRYF0NV');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ColoristIQ – Интелигентен асистент за колористи</title>
@@ -180,6 +170,29 @@
       background: #C4885A;
       border-radius: 3px;
     }
+
+    .cookie-banner {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 50;
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      color: #4A2010;
+      border: 1px solid rgba(74, 32, 16, .12);
+      box-shadow: 0 12px 40px rgba(43, 20, 11, .2);
+    }
+
+    @media (max-width: 640px) {
+      .cookie-banner {
+        left: .75rem;
+        right: .75rem;
+        bottom: .75rem;
+      }
+    }
+
   </style>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -1073,7 +1086,7 @@
           <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-5">Компания</h4>
           <ul class="space-y-3">
             <li><a href="#about" class="text-white/45 text-sm hover:text-orange transition-colors">За мен</a></li>
-            <li><a href="#" class="text-white/45 text-sm hover:text-orange transition-colors">Поверителност</a></li>
+            <li><button type="button" id="footer-cookie-settings" class="text-white/45 text-sm hover:text-orange transition-colors">Настройки за бисквитки</button></li>
             <li><a href="#" class="text-white/45 text-sm hover:text-orange transition-colors">Условия</a></li>
             <li><a href="#" class="text-white/45 text-sm hover:text-orange transition-colors">Контакти</a></li>
           </ul>
@@ -1087,7 +1100,135 @@
     </div>
   </footer>
 
+  <!-- COOKIE CONSENT -->
+  <section id="cookie-banner" class="cookie-banner rounded-2xl p-5 sm:p-6" role="dialog"
+    aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="false" hidden>
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-xl">
+        <h2 id="cookie-title" class="text-lg font-bold text-brown">Поверителност и бисквитки</h2>
+        <p id="cookie-description" class="text-sm text-brown/65 leading-relaxed mt-2">
+          Използваме Google Analytics, за да разберем как посетителите използват сайта и да го подобряваме.
+          Аналитичните бисквитки са изключени, докато не дадеш съгласие.
+        </p>
+      </div>
+      <div class="flex shrink-0 flex-col-reverse sm:flex-col gap-2 sm:min-w-32">
+        <button id="cookie-reject" type="button"
+          class="border border-brown/20 text-brown font-semibold text-sm px-4 py-2.5 rounded-full hover:border-orange hover:text-orange transition-colors">
+          Отказвам
+        </button>
+        <button id="cookie-accept" type="button"
+          class="btn-primary text-white font-semibold text-sm px-4 py-2.5 rounded-full">
+          Приемам
+        </button>
+      </div>
+    </div>
+  </section>
   <script>
+    // Google Consent Mode (Advanced) for Google Analytics
+    (function () {
+      const measurementId = 'G-8BEMRYF0NV';
+      const consentKey = 'coloristiq-analytics-consent';
+      const banner = document.getElementById('cookie-banner');
+      const footerSettingsButton = document.getElementById('footer-cookie-settings');
+      const acceptButton = document.getElementById('cookie-accept');
+      const rejectButton = document.getElementById('cookie-reject');
+      let analyticsLoaded = false;
+
+      function initializeAnalytics() {
+        if (analyticsLoaded) return;
+        analyticsLoaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+        // Advanced Consent Mode: tags can load, but storage is denied by default.
+        window.gtag('consent', 'default', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          wait_for_update: 500
+        });
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId);
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+        document.head.appendChild(script);
+      }
+
+      function updateAnalyticsConsent(value) {
+        const granted = value === 'granted';
+        window.gtag('consent', 'update', {
+          analytics_storage: granted ? 'granted' : 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+      }
+
+      function saveConsent(value) {
+        try {
+          window.localStorage.setItem(consentKey, value);
+        } catch (storageError) {
+          console.warn('Could not save cookie consent preference:', storageError);
+        }
+      }
+
+      function closeBanner() {
+        banner.hidden = true;
+      }
+
+      function showBanner() {
+        banner.hidden = false;
+      }
+
+      function revokeAnalytics() {
+        updateAnalyticsConsent('denied');
+        const cookieNames = ['_ga', '_ga_' + measurementId.replace(/-/g, '')];
+        document.cookie.split(';').forEach(cookie => {
+          const name = cookie.split('=')[0].trim();
+          if (cookieNames.includes(name)) {
+            document.cookie = name + '=; Max-Age=0; path=/';
+            document.cookie = name + '=; Max-Age=0; path=/; domain=' + window.location.hostname;
+          }
+        });
+      }
+
+      function setConsent(value) {
+        saveConsent(value);
+        updateAnalyticsConsent(value);
+        if (value === 'denied') revokeAnalytics();
+        closeBanner();
+      }
+
+      let savedConsent = null;
+      try {
+        savedConsent = window.localStorage.getItem(consentKey);
+      } catch (storageError) {
+        console.warn('Could not read cookie consent preference:', storageError);
+      }
+
+      // Advanced Consent Mode must initialize before the visitor makes a choice.
+      initializeAnalytics();
+      if (savedConsent === 'granted') {
+        updateAnalyticsConsent('granted');
+        closeBanner();
+      } else if (savedConsent === 'denied') {
+        revokeAnalytics();
+        closeBanner();
+      } else {
+        showBanner();
+      }
+
+      acceptButton.addEventListener('click', () => setConsent('granted'));
+      rejectButton.addEventListener('click', () => setConsent('denied'));
+      footerSettingsButton.addEventListener('click', () => {
+        showBanner();
+        banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+
     // Scroll animations
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
