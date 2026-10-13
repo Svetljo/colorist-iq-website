@@ -398,7 +398,8 @@
       <dl class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm">
         <div class="flex gap-2">
           <dt class="text-brown/45">В сила от:</dt>
-          <dd class="font-semibold text-brown"><span class="ph">[ДАТА]</span></dd>
+          <dd class="font-semibold text-brown"><time datetime="2026-10-12">12.10.2026 г.</time>
+          </dd>
         </div>
         <div class="flex gap-2">
           <dt class="text-brown/45">Последна актуализация:</dt>
@@ -431,7 +432,7 @@
           <a href="#obhvat">2. Обхват</a>
           <a href="#danni">3. Какви данни обработваме</a>
           <a href="#biskvitki">4. Бисквитки и аналитика</a>
-          <a href="#poluchateli">5. Получатели и подобработващи</a>
+          <a href="#poluchateli">5. Получатели и обработващи</a>
           <a href="#predavane">6. Предаване извън ЕИП</a>
           <a href="#srokove">7. Срокове на съхранение</a>
           <a href="#prava">8. Твоите права</a>
@@ -446,7 +447,8 @@
 
         <!-- Mobile table of contents -->
         <details id="mobile-toc" class="lg:hidden mb-10 bg-cream rounded-2xl border border-brown/10">
-          <summary class="flex items-center justify-between cursor-pointer list-none px-5 py-4 font-semibold text-brown">
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none px-5 py-4 font-semibold text-brown">
             Съдържание
             <svg class="toc-chevron w-5 h-5 text-orange transition-transform" fill="none" stroke="currentColor"
               viewBox="0 0 24 24" aria-hidden="true">
@@ -458,7 +460,7 @@
             <a href="#obhvat">2. Обхват</a>
             <a href="#danni">3. Какви данни обработваме</a>
             <a href="#biskvitki">4. Бисквитки и аналитика</a>
-            <a href="#poluchateli">5. Получатели и подобработващи</a>
+            <a href="#poluchateli">5. Получатели и обработващи</a>
             <a href="#predavane">6. Предаване извън ЕИП</a>
             <a href="#srokove">7. Срокове на съхранение</a>
             <a href="#prava">8. Твоите права</a>
@@ -479,13 +481,13 @@
               <p>Ние отговаряме за данните, които събираме за теб. Ето как да се свържеш с нас.</p>
             </div>
             <ol class="clauses">
-              <li data-section="1">Администратор на личните данни е <span class="ph">[НАИМЕНОВАНИЕ НА
-                  ДРУЖЕСТВОТО]</span>, ЕИК <span class="ph">[ЕИК]</span>, със седалище и адрес на управление
-                <span class="ph">[АДРЕС]</span>, имейл <span class="ph">[ИМЕЙЛ]</span> („ние“).</li>
+              <li data-section="1">Администратор на личните данни е Люсил РД ЕООД, ЕИК 202024802, със седалище и адрес на управление
+                ж.к. Гоце Делчев, ул. Боянски Водопад, бл. 2Б, ап. 47, имейл lyubomira.bat@gmail.com („ние“).
+              </li>
               <li data-section="1">Обработваме личните данни в съответствие с Регламент (ЕС) 2016/679 (ОРЗД) и
                 Закона за защита на личните данни.</li>
-              <li data-section="1">Длъжностно лице по защита на данните: <span class="ph">[ИМЕ И ИМЕЙЛ / „не е
-                  назначено“]</span>.</li>
+              <li data-section="1">Длъжностно лице по защита на данните: Любомира Бакалска,
+                  lyubomira.bat@gmail.com.</li>
             </ol>
           </section>
 
@@ -503,7 +505,8 @@
               <li data-section="2">За данните на Клиентите, които Ползвателите въвеждат в приложението, Ползвателят
                 е администратор, а ние сме обработващ лични данни. Тези отношения са уредени в
                 <a href="/terms#danni-na-klienti">раздел 10 от Общите условия</a>. Ако си клиент на колорист,
-                който използва ColoristIQ, и имаш въпрос за данните си, свържи се първо със своя колорист.</li>
+                който използва ColoristIQ, и имаш въпрос за данните си, свържи се първо със своя колорист.
+              </li>
             </ol>
           </section>
 
@@ -566,7 +569,7 @@
                     <td class="py-3 pr-4">IP адрес, технически записи (логове)</td>
                     <td class="py-3 pr-4">Законен интерес (б. „е“) — защита от злоупотреби и отстраняване на грешки
                     </td>
-                    <td class="py-3">До <span class="ph">[30]</span> дни</td>
+                    <td class="py-3">До 30 дни</td>
                   </tr>
                 </tbody>
               </table>
@@ -591,12 +594,14 @@
             </div>
             <ol class="clauses">
               <li data-section="4"><strong>Необходими.</strong> Запазваме избора ти за бисквитките в локалното
-                хранилище на браузъра (ключ <code class="text-xs bg-cream px-1.5 py-0.5 rounded">coloristiq-analytics-consent</code>),
+                хранилище на браузъра (ключ <code
+                  class="text-xs bg-cream px-1.5 py-0.5 rounded">coloristiq-analytics-consent</code>),
                 за да не те питаме при всяко посещение. Това не изисква съгласие.</li>
               <li data-section="4"><strong>Аналитични.</strong> С твое съгласие Google Analytics поставя бисквитки
                 (<code class="text-xs bg-cream px-1.5 py-0.5 rounded">_ga</code>,
                 <code class="text-xs bg-cream px-1.5 py-0.5 rounded">_ga_*</code>) със срок до 2 години, за да
-                разберем колко посетители има сайтът и кои страници ги интересуват.</li>
+                разберем колко посетители има сайтът и кои страници ги интересуват.
+              </li>
               <li data-section="4">Използваме режима за съгласие на Google (Consent Mode). Докато не дадеш съгласие,
                 бисквитки за аналитика не се поставят, но Google може да получи ограничени технически сигнали без
                 бисквитки (например, че страницата е заредена), които се използват за обобщена статистика.</li>
@@ -604,36 +609,30 @@
               <li data-section="4">Можеш да промениш избора си по всяко време чрез
                 <button type="button" data-open-cookie-settings
                   class="font-semibold text-[#C8461A] underline underline-offset-[3px] hover:text-orange">Настройки
-                  за бисквитки</button>. При отказ изтриваме аналитичните бисквитки.</li>
+                  за бисквитки</button>. При отказ изтриваме аналитичните бисквитки.
+              </li>
             </ol>
           </section>
 
           <!-- 5 -->
           <section id="poluchateli">
-            <h2><span class="num">05</span>Получатели и подобработващи</h2>
+            <h2><span class="num">05</span>Получатели и обработващи</h2>
             <div class="summary">
               <span class="summary-label">Накратко</span>
-              <p>Работим с няколко доверени доставчика, които ни помагат да поддържаме сайта и приложението. Те
-                нямат право да използват данните ти за свои цели.</p>
+              <p>Използваме външни доставчици за хостинг, бюлетин, аналитика, съхранение на данни и покупки в мобилното приложение. Всеки доставчик получава само данните, необходими за съответната услуга.</p>
             </div>
             <ol class="clauses">
-              <li data-section="5">Предоставяме данни само на доставчици, с които имаме договор за обработване:
+              <li data-section="5">Предоставяме или правим достъпни лични данни на следните категории получатели и доставчици, доколкото това е необходимо за функционирането на сайта и приложението:
                 <ul class="bullets">
-                  <li><strong>Vercel Inc.</strong> (САЩ) — хостинг на уебсайта;</li>
-                  <li><strong>Google Ireland Ltd. / Google LLC</strong> — Google Analytics (само със съгласие) и
-                    Google Fonts (шрифтове, при зареждането на които браузърът ти изпраща IP адреса си до Google);
-                  </li>
-                  <li><strong>Loops</strong> (САЩ) — изпращане на бюлетина и управление на абонатите;</li>
-                  <li><strong>Tailwind CSS CDN</strong> — зареждане на стиловете на сайта (IP адрес и технически
-                    данни при зареждане);</li>
-                  <li><span class="ph">[ДОСТАВЧИК НА ХОСТИНГ / БАЗА ДАННИ ЗА ПРИЛОЖЕНИЕТО]</span> — съхранение на
-                    данните в приложението;</li>
-                  <li><span class="ph">[ДОСТАВЧИК НА ПЛАЩАНИЯ]</span> — обработка на плащания;</li>
-                  <li><span class="ph">[СЧЕТОВОДИТЕЛ / СЧЕТОВОДНА ФИРМА]</span> — водене на счетоводството.</li>
+                  <li><strong>Vercel Inc.</strong> — хостинг, CDN и доставка на уебсайта. При зареждане на страниците Vercel може да обработва технически данни за заявката, включително IP адрес, дата и час, заявен URL, User-Agent, реферер, статус на заявката и данни за сигурност и диагностика. Newsletter формулярът не се изпраща през Vercel;</li>
+                  <li><strong>Loops</strong> — изпращане на бюлетина и управление на абонатите. При записване чрез формуляра директно към Loops се изпращат имейл адресът, името, избраната група и техническият източник на записването;</li>
+                  <li><strong>Supabase</strong> — хостинг и съхранение на данните, използвани от мобилното приложение;</li>
+                  <li><strong>Google Ireland Ltd. / Google LLC</strong> — Google Fonts и Google Analytics. Аналитичният скрипт се зарежда от домейна googletagmanager.com и Google Analytics се активира само съгласно избора за аналитични бисквитки. При зареждане на Google Fonts браузърът изпраща техническа заявка, която може да включва IP адрес;</li>
+                  <li><strong>Apple App Store и Google Play Store</strong> — обработване на покупки и абонаменти в мобилното приложение, включително информация за транзакции, статуса на покупката и абонамента. Пълните данни на платежната карта не се предоставят на Доставчика.</li>
                 </ul>
               </li>
-              <li data-section="5">Можем да предоставим данни на държавни органи, когато това се изисква от закона.
-              </li>
+              <li data-section="5">Когато тези доставчици обработват данни от името на Доставчика, отношенията се уреждат с приложимите договори и гаранции за защита на личните данни. Някои доставчици могат да обработват технически данни и за собствени цели съгласно собствените си политики за поверителност.</li>
+              <li data-section="5">Можем да предоставим данни на държавни органи, когато това се изисква от закона.</li>
             </ol>
           </section>
 
@@ -664,8 +663,9 @@
             <ol class="clauses">
               <li data-section="7">Сроковете за всяка цел са посочени в таблицата в раздел 3.</li>
               <li data-section="7">След закриване на акаунта изтриваме данните в него в срок до
-                <span class="ph">[30]</span> дни, а от резервните копия — до <span class="ph">[90]</span> дни.
-                Счетоводните документи се пазят 10 години, както изисква законът.</li>
+                30 дни, а от резервните копия — до 90 дни.
+                Счетоводните документи се пазят 10 години, както изисква законът.
+              </li>
               <li data-section="7">След изтичане на срока данните се изтриват или анонимизират необратимо.</li>
             </ol>
           </section>
@@ -692,13 +692,15 @@
                   </li>
                 </ul>
               </li>
-              <li data-section="8">Исканията се изпращат на <span class="ph">[ИМЕЙЛ]</span>. Отговаряме в срок от
+              <li data-section="8">Исканията се изпращат на lyubomira.bat@gmail.com. Отговаряме
+                в срок от
                 един месец. При сложни искания срокът може да бъде удължен с още два месеца, за което ще те
                 уведомим. Може да поискаме да потвърдиш самоличността си.</li>
               <li data-section="8">Имаш право да подадеш жалба до Комисията за защита на личните данни — гр. София
                 1592, бул. „Проф. Цветан Лазаров“ № 2,
                 <a href="https://www.cpdp.bg" target="_blank" rel="noopener">www.cpdp.bg</a>, или до надзорния орган
-                в държавата, в която пребиваваш.</li>
+                в държавата, в която пребиваваш.
+              </li>
             </ol>
           </section>
 
@@ -743,9 +745,9 @@
             <h2><span class="num">12</span>Контакти</h2>
             <p>За въпроси относно личните ти данни:</p>
             <div class="callout">
-              <p><strong><span class="ph">[НАИМЕНОВАНИЕ НА ДРУЖЕСТВОТО]</span></strong></p>
-              <p class="!mt-1">Адрес: <span class="ph">[АДРЕС]</span></p>
-              <p class="!mt-1">Имейл: <span class="ph">[ИМЕЙЛ]</span></p>
+              <p><strong>Люсил РД ЕООД</strong></p>
+              <p class="!mt-1">Адрес: ж.к. Гоце Делчев, ул. Боянски Водопад, бл. 2Б, ап. 47</p>
+              <p class="!mt-1">Имейл: lyubomira.bat@gmail.com</p>
             </div>
           </section>
 
@@ -829,8 +831,8 @@
   </footer>
 
   <!-- COOKIE CONSENT -->
-  <section id="cookie-banner" class="cookie-banner rounded-2xl p-5 sm:p-6" role="dialog"
-    aria-labelledby="cookie-title" aria-describedby="cookie-description" aria-modal="false" hidden>
+  <section id="cookie-banner" class="cookie-banner rounded-2xl p-5 sm:p-6" role="dialog" aria-labelledby="cookie-title"
+    aria-describedby="cookie-description" aria-modal="false" hidden>
     <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div class="max-w-xl">
         <h2 id="cookie-title" class="text-lg font-bold text-brown">Поверителност и бисквитки</h2>
